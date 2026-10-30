@@ -1,0 +1,1256 @@
+{
+  "version": 1,
+  "source": "tabler-icons v3.50.0",
+  "apps": {
+    "cherrytree": {
+      "name": "cherrytree",
+      "categories": "kali-reporting-tools",
+      "glyph": "notebook"
+    },
+    "chromium": {
+      "name": "Chromium Web Browser",
+      "categories": "Network;WebBrowser;",
+      "glyph": "brand-chrome"
+    },
+    "webbrowser": {
+      "name": "Web Browser",
+      "categories": "Network;WebBrowser;",
+      "glyph": "browser"
+    },
+    "kali-menu": {
+      "name": "TeXdoctk",
+      "categories": "hidden",
+      "glyph": "apps"
+    },
+    "ettercap": {
+      "name": "ettercap-pkexec",
+      "categories": "kali-collection",
+      "glyph": "tool"
+    },
+    "exploit-db": {
+      "name": "Exploit Database",
+      "categories": "kali-kali-offsec-links",
+      "glyph": "bug"
+    },
+    "firefox-esr": {
+      "name": "Firefox ESR",
+      "categories": "Network;WebBrowser;",
+      "glyph": "brand-firefox"
+    },
+    "org.gnome.SystemMonitor": {
+      "name": "System Monitor",
+      "categories": "GNOME;GTK;System;Monitor;",
+      "glyph": "activity"
+    },
+    "gparted": {
+      "name": "GParted",
+      "categories": "GNOME;System;Filesystem;",
+      "glyph": "layout-grid"
+    },
+    "guymager_128": {
+      "name": "guymager",
+      "categories": "kali-forensic-imaging-tools;kali-respond",
+      "glyph": "microscope"
+    },
+    "kali-xhydra": {
+      "name": "xhydra",
+      "categories": "kali-brute-force;kali-credential-access",
+      "glyph": "key"
+    },
+    "input-keyboard": {
+      "name": "Input Method",
+      "categories": "Settings",
+      "glyph": "keyboard"
+    },
+    "kali-aircrack-ng": {
+      "name": "aircrack-ng",
+      "categories": "kali-wifi-credential-access",
+      "glyph": "wifi"
+    },
+    "kali-amass": {
+      "name": "amass",
+      "categories": "kali-network-information;kali-network-service-discovery;kali-discovery;kali-identify",
+      "glyph": "world-search"
+    },
+    "kali-arping": {
+      "name": "arping",
+      "categories": "kali-remote-system-discovery;kali-discovery",
+      "glyph": "network"
+    },
+    "kali-arpspoof": {
+      "name": "arpspoof",
+      "categories": "kali-network-sniffing",
+      "glyph": "network"
+    },
+    "kali-atk6-thcping6": {
+      "name": "atk6-thcping6",
+      "categories": "kali-remote-system-discovery",
+      "glyph": "radar-2"
+    },
+    "kali-autopsy": {
+      "name": "autopsy",
+      "categories": "kali-sleuth-kit-suite;kali-forensics",
+      "glyph": "microscope"
+    },
+    "kali-binwalk": {
+      "name": "binwalk",
+      "categories": "kali-forensics",
+      "glyph": "binary"
+    },
+    "kali-binwalk3": {
+      "name": "binwalk3",
+      "categories": "kali-forensics",
+      "glyph": "binary"
+    },
+    "kali-blkcalc": {
+      "name": "blkcalc",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "disc"
+    },
+    "kali-blkcat": {
+      "name": "blkcat",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "disc"
+    },
+    "kali-blkls": {
+      "name": "blkls",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "disc"
+    },
+    "kali-blkstat": {
+      "name": "blkstat",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "disc"
+    },
+    "kali-bloodhound-python": {
+      "name": "bloodhound-python",
+      "categories": "kali-active-directory",
+      "glyph": "user-search"
+    },
+    "kali-bugs": {
+      "name": "Kali Bugs",
+      "categories": "kali-kali-offsec-links",
+      "glyph": "bug"
+    },
+    "kali-bulk_extractor": {
+      "name": "bulk_extractor",
+      "categories": "kali-forensics",
+      "glyph": "file-search"
+    },
+    "kali-bully": {
+      "name": "bully",
+      "categories": "kali-wifi-credential-access",
+      "glyph": "wifi"
+    },
+    "kali-burpsuite": {
+      "name": "burpsuite",
+      "categories": "kali-web-vulnerability-scanning;kali-reconnaissance",
+      "glyph": "spider"
+    },
+    "kali-cadaver": {
+      "name": "cadaver",
+      "categories": "kali-application-layer-protocol",
+      "glyph": "cloud-upload"
+    },
+    "kali-cewl": {
+      "name": "cewl",
+      "categories": "kali-password-profiling-wordlists;kali-credential-access",
+      "glyph": "list-check"
+    },
+    "kali-chntpw": {
+      "name": "chntpw",
+      "categories": "kali-os-credential-dumping",
+      "glyph": "key"
+    },
+    "kali-clang++": {
+      "name": "clang++",
+      "categories": "kali-resource-development",
+      "glyph": "file-code"
+    },
+    "kali-clang": {
+      "name": "clang",
+      "categories": "kali-resource-development",
+      "glyph": "file-code"
+    },
+    "kali-commix": {
+      "name": "commix",
+      "categories": "kali-initial-access",
+      "glyph": "terminal-2"
+    },
+    "kali-creddump7": {
+      "name": "creddump7",
+      "categories": "kali-os-credential-dumping",
+      "glyph": "key"
+    },
+    "kali-crunch": {
+      "name": "crunch",
+      "categories": "kali-password-profiling-wordlists;kali-credential-access",
+      "glyph": "binary"
+    },
+    "kali-cryptsetup": {
+      "name": "cryptsetup",
+      "categories": "kali-protect",
+      "glyph": "tool"
+    },
+    "kali-cutycapt": {
+      "name": "cutycapt",
+      "categories": "kali-reporting-tools",
+      "glyph": "screenshot"
+    },
+    "kali-davtest": {
+      "name": "davtest",
+      "categories": "kali-web-vulnerability-scanning",
+      "glyph": "cloud-upload"
+    },
+    "kali-dbd": {
+      "name": "dbd",
+      "categories": "kali-non-application-layer-protocol",
+      "glyph": "network"
+    },
+    "kali-dirb": {
+      "name": "dirb",
+      "categories": "kali-web-scanning;kali-reconnaissance",
+      "glyph": "direction"
+    },
+    "kali-dirbuster": {
+      "name": "dirbuster",
+      "categories": "kali-web-scanning;kali-reconnaissance",
+      "glyph": "direction"
+    },
+    "kali-dmitry": {
+      "name": "dmitry",
+      "categories": "kali-network-information",
+      "glyph": "world-search"
+    },
+    "kali-dns-rebind": {
+      "name": "dns-rebind",
+      "categories": "kali-initial-access",
+      "glyph": "network"
+    },
+    "kali-dns2tcpc": {
+      "name": "dns2tcpc",
+      "categories": "kali-protocol-tunneling",
+      "glyph": "arrows-exchange"
+    },
+    "kali-dns2tcpd": {
+      "name": "dns2tcpd",
+      "categories": "kali-protocol-tunneling",
+      "glyph": "arrows-exchange"
+    },
+    "kali-dnschef": {
+      "name": "dnschef",
+      "categories": "kali-network-sniffing",
+      "glyph": "network"
+    },
+    "kali-dnsenum": {
+      "name": "dnsenum",
+      "categories": "kali-network-information-dns",
+      "glyph": "world-search"
+    },
+    "kali-dnsmap": {
+      "name": "dnsmap",
+      "categories": "kali-network-information-dns",
+      "glyph": "world-search"
+    },
+    "kali-dnsrecon": {
+      "name": "dnsrecon",
+      "categories": "kali-network-information-dns",
+      "glyph": "radar-2"
+    },
+    "kali-docs": {
+      "name": "Kali Docs",
+      "categories": "kali-kali-offsec-links",
+      "glyph": "book"
+    },
+    "kali-dsniff": {
+      "name": "dsniff",
+      "categories": "kali-network-sniffing",
+      "glyph": "wave-sine"
+    },
+    "kali-enum4linux": {
+      "name": "enum4linux",
+      "categories": "kali-network-share-discovery;kali-discovery",
+      "glyph": "users"
+    },
+    "kali-evil-winrm": {
+      "name": "evil-winrm",
+      "categories": "kali-pass-the-hash;kali-pass-the-hash;kali-lateral-movement;kali-application-layer-protocol",
+      "glyph": "terminal-2"
+    },
+    "kali-exe2hex": {
+      "name": "exe2hex",
+      "categories": "kali-defense-evasion",
+      "glyph": "binary"
+    },
+    "kali-eyewitness": {
+      "name": "eyewitness",
+      "categories": "kali-reporting-tools",
+      "glyph": "eye-check"
+    },
+    "kali-faraday-start": {
+      "name": "faraday-start",
+      "categories": "kali-reporting-tools;kali-system-services",
+      "glyph": "shield-bolt"
+    },
+    "kali-faraday-stop": {
+      "name": "faraday-stop",
+      "categories": "kali-system-services",
+      "glyph": "shield-bolt"
+    },
+    "kali-fern-wifi-cracker": {
+      "name": "fern-wifi-cracker",
+      "categories": "kali-wifi-credential-access",
+      "glyph": "wifi"
+    },
+    "kali-feroxbuster": {
+      "name": "feroxbuster",
+      "categories": "kali-web-scanning",
+      "glyph": "direction"
+    },
+    "kali-ffind": {
+      "name": "ffind",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "microscope"
+    },
+    "kali-ffuf": {
+      "name": "ffuf",
+      "categories": "kali-web-scanning;kali-reconnaissance",
+      "glyph": "filter"
+    },
+    "kali-fierce": {
+      "name": "fierce",
+      "categories": "kali-remote-system-discovery;kali-discovery",
+      "glyph": "radar-2"
+    },
+    "kali-fls": {
+      "name": "fls",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "file-search"
+    },
+    "kali-forums": {
+      "name": "Kali Forums",
+      "categories": "kali-kali-offsec-links",
+      "glyph": "message-2"
+    },
+    "kali-fping": {
+      "name": "fping",
+      "categories": "kali-remote-system-discovery",
+      "glyph": "network"
+    },
+    "kali-fsstat": {
+      "name": "fsstat",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "disc"
+    },
+    "kali-generic_chunked": {
+      "name": "generic_chunked",
+      "categories": "kali-resource-development",
+      "glyph": "file-code"
+    },
+    "kali-generic_listen_tcp": {
+      "name": "generic_listen_tcp",
+      "categories": "kali-resource-development",
+      "glyph": "network"
+    },
+    "kali-generic_send_tcp": {
+      "name": "generic_send_tcp",
+      "categories": "kali-resource-development",
+      "glyph": "network"
+    },
+    "kali-generic_send_udp": {
+      "name": "generic_send_udp",
+      "categories": "kali-resource-development",
+      "glyph": "network"
+    },
+    "kali-gobuster": {
+      "name": "gobuster",
+      "categories": "kali-web-scanning;kali-reconnaissance",
+      "glyph": "direction"
+    },
+    "kali-gophish-start": {
+      "name": "gophish-start",
+      "categories": "kali-initial-access;kali-system-services",
+      "glyph": "fish"
+    },
+    "kali-gophish-stop": {
+      "name": "gophish-stop",
+      "categories": "kali-system-services",
+      "glyph": "fish"
+    },
+    "kali-hash-identifier": {
+      "name": "hash-identifier",
+      "categories": "kali-hash-identification",
+      "glyph": "hash"
+    },
+    "kali-hashcat": {
+      "name": "hashcat",
+      "categories": "kali-password-cracking;kali-credential-access",
+      "glyph": "hash"
+    },
+    "kali-hashdeep": {
+      "name": "hashdeep",
+      "categories": "kali-forensics",
+      "glyph": "hash"
+    },
+    "kali-hashid": {
+      "name": "hashid",
+      "categories": "kali-hash-identification",
+      "glyph": "hash"
+    },
+    "kali-hfind": {
+      "name": "hfind",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "file-search"
+    },
+    "kali-hping3": {
+      "name": "hping3",
+      "categories": "kali-remote-system-discovery;kali-discovery",
+      "glyph": "network"
+    },
+    "kali-hydra": {
+      "name": "hydra",
+      "categories": "kali-brute-force;kali-credential-access",
+      "glyph": "key"
+    },
+    "kali-icat": {
+      "name": "icat",
+      "categories": "kali-sleuth-kit-suite;kali-respond",
+      "glyph": "file-search"
+    },
+    "kali-ifind": {
+      "name": "ifind",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "file-search"
+    },
+    "kali-ike-scan": {
+      "name": "ike-scan",
+      "categories": "kali-network-service-discovery",
+      "glyph": "shield-search"
+    },
+    "kali-ils": {
+      "name": "ils",
+      "categories": "kali-sleuth-kit-suite;kali-respond",
+      "glyph": "file-search"
+    },
+    "kali-img_cat": {
+      "name": "img_cat",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "disc"
+    },
+    "kali-img_stat": {
+      "name": "img_stat",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "disc"
+    },
+    "kali-impacket-mssqlclient": {
+      "name": "impacket-mssqlclient",
+      "categories": "kali-databases",
+      "glyph": "database"
+    },
+    "kali-impacket-psexec": {
+      "name": "impacket-psexec",
+      "categories": "kali-lateral-movement",
+      "glyph": "device-desktop"
+    },
+    "kali-impacket-scripts": {
+      "name": "impacket-scripts",
+      "categories": "kali-pass-the-hash;kali-pass-the-hash;kali-application-layer-protocol;kali-respond",
+      "glyph": "folder-share"
+    },
+    "kali-impacket-smbexec": {
+      "name": "impacket-smbexec",
+      "categories": "kali-lateral-movement",
+      "glyph": "folder-share"
+    },
+    "kali-impacket-smbserver": {
+      "name": "impacket-smbserver",
+      "categories": "kali-exfiltration",
+      "glyph": "folder-share"
+    },
+    "kali-iodine-client-start": {
+      "name": "iodine-client-start",
+      "categories": "kali-protocol-tunneling",
+      "glyph": "arrows-exchange"
+    },
+    "kali-istat": {
+      "name": "istat",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "file-search"
+    },
+    "kali-jcat": {
+      "name": "jcat",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "file-search"
+    },
+    "kali-jls": {
+      "name": "jls",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "file-search"
+    },
+    "kali-john": {
+      "name": "john",
+      "categories": "kali-password-cracking;kali-credential-access",
+      "glyph": "key"
+    },
+    "kali-kismet": {
+      "name": "kismet",
+      "categories": "kali-wifi",
+      "glyph": "antenna-bars-5"
+    },
+    "kali-laudanum": {
+      "name": "laudanum",
+      "categories": "kali-persistence",
+      "glyph": "file-code"
+    },
+    "kali-lbd": {
+      "name": "lbd",
+      "categories": "kali-web-scanning",
+      "glyph": "radar-2"
+    },
+    "kali-legion": {
+      "name": "legion",
+      "categories": "kali-network-information;kali-reconnaissance",
+      "glyph": "radar-2"
+    },
+    "kali-linpeas": {
+      "name": "linpeas",
+      "categories": "kali-privilege-escalation",
+      "glyph": "user-shield"
+    },
+    "kali-macchanger": {
+      "name": "macchanger",
+      "categories": "kali-defense-evasion",
+      "glyph": "network"
+    },
+    "kali-mactime": {
+      "name": "mactime",
+      "categories": "kali-sleuth-kit-suite;kali-respond",
+      "glyph": "file-search"
+    },
+    "kali-magicrescue": {
+      "name": "magicrescue",
+      "categories": "kali-forensic-carving-tools",
+      "glyph": "device-floppy"
+    },
+    "kali-maltego": {
+      "name": "maltego (installer)",
+      "categories": "kali-reconnaissance;kali-reporting-tools;kali-identify",
+      "glyph": "chart-dots"
+    },
+    "kali-masscan": {
+      "name": "masscan",
+      "categories": "kali-network-service-discovery;kali-discovery",
+      "glyph": "scan"
+    },
+    "kali-medusa": {
+      "name": "medusa",
+      "categories": "kali-brute-force;kali-credential-access",
+      "glyph": "key"
+    },
+    "kali-metasploit-framework": {
+      "name": "metasploit-framework",
+      "categories": "kali-initial-access;kali-execution;kali-privilege-escalation;kali-command-and-control",
+      "glyph": "target"
+    },
+    "kali-mimikatz": {
+      "name": "mimikatz",
+      "categories": "kali-pass-the-hash;kali-os-credential-dumping;kali-pass-the-hash",
+      "glyph": "key"
+    },
+    "kali-miredo": {
+      "name": "miredo",
+      "categories": "kali-protocol-tunneling",
+      "glyph": "network"
+    },
+    "kali-mitmproxy": {
+      "name": "mitmproxy",
+      "categories": "kali-collection",
+      "glyph": "arrows-exchange"
+    },
+    "kali-mmcat": {
+      "name": "mmcat",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "disc"
+    },
+    "kali-mmls": {
+      "name": "mmls",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "disc"
+    },
+    "kali-mmstat": {
+      "name": "mmstat",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "disc"
+    },
+    "kali-msf-nasm_shell": {
+      "name": "msf-nasm_shell",
+      "categories": "kali-resource-development",
+      "glyph": "terminal-2"
+    },
+    "kali-msfpc": {
+      "name": "msfpc",
+      "categories": "kali-resource-development",
+      "glyph": "bomb"
+    },
+    "kali-msfvenom": {
+      "name": "msfvenom",
+      "categories": "kali-resource-development;kali-defense-evasion",
+      "glyph": "bomb"
+    },
+    "kali-mysql": {
+      "name": "mysql",
+      "categories": "kali-databases",
+      "glyph": "database"
+    },
+    "kali-nbtscan": {
+      "name": "nbtscan",
+      "categories": "kali-network-share-discovery",
+      "glyph": "server"
+    },
+    "kali-ncrack": {
+      "name": "ncrack",
+      "categories": "kali-brute-force;kali-credential-access",
+      "glyph": "key"
+    },
+    "kali-netcat": {
+      "name": "netcat",
+      "categories": "kali-non-application-layer-protocol;kali-exfiltration",
+      "glyph": "terminal-2"
+    },
+    "kali-netdiscover": {
+      "name": "netdiscover",
+      "categories": "kali-system-network-configuration-discovery;kali-discovery",
+      "glyph": "network"
+    },
+    "kali-netexec": {
+      "name": "netexec",
+      "categories": "kali-pass-the-hash;kali-brute-force;kali-credential-access;kali-network-share-discovery;kali-pass-the-hash;kali-lateral-movement;kali-application-layer-protocol",
+      "glyph": "network"
+    },
+    "kali-nethunter": {
+      "name": "NetHunter",
+      "categories": "kali-kali-offsec-links",
+      "glyph": "device-mobile"
+    },
+    "kali-netmask": {
+      "name": "netmask",
+      "categories": "kali-system-network-configuration-discovery",
+      "glyph": "radar-2"
+    },
+    "kali-netsniff-ng": {
+      "name": "netsniff-ng",
+      "categories": "kali-network-sniffing;kali-respond",
+      "glyph": "wave-sine"
+    },
+    "kali-nikto": {
+      "name": "nikto",
+      "categories": "kali-web-vulnerability-scanning",
+      "glyph": "bug"
+    },
+    "kali-nmap": {
+      "name": "nmap",
+      "categories": "kali-network-information;kali-vulnerability-scanning;kali-reconnaissance;kali-network-service-discovery;kali-discovery",
+      "glyph": "radar-2"
+    },
+    "kali-nuclei": {
+      "name": "nuclei",
+      "categories": "kali-web-vulnerability-scanning",
+      "glyph": "atom"
+    },
+    "kali-onesixtyone": {
+      "name": "onesixtyone",
+      "categories": "kali-snmp",
+      "glyph": "network"
+    },
+    "kali-ophcrack-cli": {
+      "name": "ophcrack-cli",
+      "categories": "kali-password-cracking",
+      "glyph": "hash"
+    },
+    "kali-passing-the-hash": {
+      "name": "passing-the-hash",
+      "categories": "kali-pass-the-hash;kali-pass-the-hash",
+      "glyph": "key"
+    },
+    "kali-patator": {
+      "name": "patator",
+      "categories": "kali-brute-force",
+      "glyph": "tool"
+    },
+    "kali-pdf-parser": {
+      "name": "pdf-parser",
+      "categories": "kali-pdf-forensics-tools",
+      "glyph": "file-text"
+    },
+    "kali-pdfid": {
+      "name": "pdfid",
+      "categories": "kali-pdf-forensics-tools",
+      "glyph": "file-text"
+    },
+    "kali-peass": {
+      "name": "peass",
+      "categories": "kali-privilege-escalation",
+      "glyph": "user-shield"
+    },
+    "kali-photorec": {
+      "name": "photorec",
+      "categories": "kali-forensic-carving-tools",
+      "glyph": "file-search"
+    },
+    "kali-pipal": {
+      "name": "pipal",
+      "categories": "kali-reporting-tools",
+      "glyph": "chart-dots"
+    },
+    "kali-pixiewps": {
+      "name": "pixiewps",
+      "categories": "kali-wifi-credential-access",
+      "glyph": "wifi"
+    },
+    "kali-powershell-empire": {
+      "name": "powershell-empire",
+      "categories": "kali-command-and-control",
+      "glyph": "skull"
+    },
+    "kali-powersploit": {
+      "name": "powersploit",
+      "categories": "kali-execution",
+      "glyph": "shield-bolt"
+    },
+    "kali-proxychains4": {
+      "name": "proxychains4",
+      "categories": "kali-protocol-tunneling",
+      "glyph": "arrows-exchange"
+    },
+    "kali-proxytunnel": {
+      "name": "proxytunnel",
+      "categories": "kali-protocol-tunneling",
+      "glyph": "arrows-exchange"
+    },
+    "kali-ptunnel": {
+      "name": "ptunnel",
+      "categories": "kali-protocol-tunneling",
+      "glyph": "arrows-exchange"
+    },
+    "kali-pwnat": {
+      "name": "pwnat",
+      "categories": "kali-protocol-tunneling",
+      "glyph": "arrows-exchange"
+    },
+    "kali-pwsh": {
+      "name": "PowerShell",
+      "categories": "System;Utility;kali-services-and-other-tools",
+      "glyph": "brand-powershell"
+    },
+    "kali-pyinstaller": {
+      "name": "pyinstaller",
+      "categories": "kali-resource-development",
+      "glyph": "brand-python"
+    },
+    "kali-radare2": {
+      "name": "radare2",
+      "categories": "kali-resource-development",
+      "glyph": "file-code"
+    },
+    "kali-rdesktop": {
+      "name": "rdesktop",
+      "categories": "kali-lateral-movement",
+      "glyph": "device-desktop"
+    },
+    "kali-reaver": {
+      "name": "reaver",
+      "categories": "kali-wifi-credential-access",
+      "glyph": "wifi"
+    },
+    "kali-recon-ng": {
+      "name": "recon-ng",
+      "categories": "kali-web-scanning;kali-reconnaissance",
+      "glyph": "world-search"
+    },
+    "kali-recordmydesktop": {
+      "name": "recordmydesktop",
+      "categories": "kali-reporting-tools",
+      "glyph": "package"
+    },
+    "kali-responder": {
+      "name": "responder",
+      "categories": "kali-credential-access",
+      "glyph": "arrows-exchange"
+    },
+    "kali-rsmangler": {
+      "name": "rsmangler",
+      "categories": "kali-password-profiling-wordlists",
+      "glyph": "list-check"
+    },
+    "kali-samdump2": {
+      "name": "samdump2",
+      "categories": "kali-os-credential-dumping",
+      "glyph": "key"
+    },
+    "kali-sbd": {
+      "name": "sbd",
+      "categories": "kali-non-application-layer-protocol",
+      "glyph": "terminal-2"
+    },
+    "kali-scalpel": {
+      "name": "scalpel",
+      "categories": "kali-forensic-carving-tools",
+      "glyph": "file-search"
+    },
+    "kali-scapy": {
+      "name": "scapy",
+      "categories": "kali-network-sniffing;kali-impact",
+      "glyph": "binary-tree"
+    },
+    "kali-scrounge-ntfs": {
+      "name": "scrounge-ntfs",
+      "categories": "kali-forensic-carving-tools;kali-recover",
+      "glyph": "disc"
+    },
+    "kali-searchsploit": {
+      "name": "searchsploit",
+      "categories": "kali-resource-development;kali-identify",
+      "glyph": "search"
+    },
+    "kali-setoolkit": {
+      "name": "setoolkit",
+      "categories": "kali-initial-access",
+      "glyph": "users"
+    },
+    "kali-sigfind": {
+      "name": "sigfind",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "search"
+    },
+    "kali-skipfish": {
+      "name": "skipfish",
+      "categories": "kali-web-vulnerability-scanning",
+      "glyph": "bug"
+    },
+    "kali-smbclient": {
+      "name": "smbclient",
+      "categories": "kali-network-share-discovery;kali-application-layer-protocol",
+      "glyph": "folder-share"
+    },
+    "kali-smbmap": {
+      "name": "smbmap",
+      "categories": "kali-pass-the-hash;kali-network-share-discovery;kali-pass-the-hash",
+      "glyph": "folder-share"
+    },
+    "kali-smtp-user-enum": {
+      "name": "smtp-user-enum",
+      "categories": "kali-account-discovery;kali-smtp",
+      "glyph": "mail"
+    },
+    "kali-snmp-check": {
+      "name": "snmp-check",
+      "categories": "kali-snmp",
+      "glyph": "chart-bar"
+    },
+    "kali-socat": {
+      "name": "socat",
+      "categories": "kali-non-application-layer-protocol",
+      "glyph": "arrows-exchange"
+    },
+    "kali-sorter": {
+      "name": "sorter",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "file-search"
+    },
+    "kali-spiderfoot-cli": {
+      "name": "spiderfoot-cli",
+      "categories": "kali-host-information;kali-identify",
+      "glyph": "spider"
+    },
+    "kali-spiderfoot": {
+      "name": "spiderfoot",
+      "categories": "kali-host-information;kali-identify",
+      "glyph": "spider"
+    },
+    "kali-spooftooph": {
+      "name": "spooftooph",
+      "categories": "kali-bluetooth",
+      "glyph": "bluetooth"
+    },
+    "kali-sqlmap": {
+      "name": "sqlmap",
+      "categories": "kali-initial-access",
+      "glyph": "database"
+    },
+    "kali-srch_strings": {
+      "name": "srch_strings",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "microscope"
+    },
+    "kali-ssldump": {
+      "name": "ssldump",
+      "categories": "kali-collection",
+      "glyph": "lock-square"
+    },
+    "kali-sslh": {
+      "name": "sslh",
+      "categories": "kali-protocol-tunneling",
+      "glyph": "arrows-exchange"
+    },
+    "kali-sslscan": {
+      "name": "sslscan",
+      "categories": "kali-ssl-tls",
+      "glyph": "lock-square"
+    },
+    "kali-sslsplit": {
+      "name": "sslsplit",
+      "categories": "kali-collection",
+      "glyph": "arrows-exchange"
+    },
+    "kali-sslyze": {
+      "name": "sslyze",
+      "categories": "kali-ssl-tls",
+      "glyph": "lock-square"
+    },
+    "kali-starkiller-start": {
+      "name": "starkiller-start",
+      "categories": "kali-command-and-control;kali-system-services",
+      "glyph": "shield-bolt"
+    },
+    "kali-starkiller-stop": {
+      "name": "starkiller-stop",
+      "categories": "kali-system-services",
+      "glyph": "shield-bolt"
+    },
+    "kali-stunnel4": {
+      "name": "stunnel4",
+      "categories": "kali-protocol-tunneling",
+      "glyph": "arrows-exchange"
+    },
+    "kali-swaks": {
+      "name": "swaks",
+      "categories": "kali-smtp",
+      "glyph": "mail"
+    },
+    "kali-tcpdump": {
+      "name": "tcpdump",
+      "categories": "kali-network-sniffing;kali-discovery",
+      "glyph": "wave-square"
+    },
+    "kali-tcpreplay": {
+      "name": "tcpreplay",
+      "categories": "kali-network-security-appliances",
+      "glyph": "network"
+    },
+    "kali-testdisk": {
+      "name": "testdisk",
+      "categories": "kali-forensic-carving-tools",
+      "glyph": "device-floppy"
+    },
+    "kali-thc-pptp-bruter": {
+      "name": "thc-pptp-bruter",
+      "categories": "kali-brute-force",
+      "glyph": "tool"
+    },
+    "kali-theHarvester": {
+      "name": "theHarvester",
+      "categories": "kali-network-information",
+      "glyph": "world-search"
+    },
+    "kali-tools": {
+      "name": "Kali Tools",
+      "categories": "kali-kali-offsec-links",
+      "glyph": "tool"
+    },
+    "kali-tsk_comparedir": {
+      "name": "tsk_comparedir",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "files"
+    },
+    "kali-tsk_gettimes": {
+      "name": "tsk_gettimes",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "files"
+    },
+    "kali-tsk_loaddb": {
+      "name": "tsk_loaddb",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "database"
+    },
+    "kali-tsk_recover": {
+      "name": "tsk_recover",
+      "categories": "kali-sleuth-kit-suite",
+      "glyph": "files"
+    },
+    "kali-tweaks": {
+      "name": "Kali Tweaks",
+      "categories": "Settings;X-XFCE-SettingsDialog;kali-services-and-other-tools",
+      "glyph": "adjustments"
+    },
+    "kali-udptunnel": {
+      "name": "udptunnel",
+      "categories": "kali-protocol-tunneling",
+      "glyph": "arrows-exchange"
+    },
+    "kali-unicornscan": {
+      "name": "unicornscan",
+      "categories": "kali-network-information;kali-network-service-discovery",
+      "glyph": "scan"
+    },
+    "kali-unix-privesc-check": {
+      "name": "unix-privesc-check",
+      "categories": "kali-privilege-escalation",
+      "glyph": "user-shield"
+    },
+    "kali-voiphopper": {
+      "name": "voiphopper",
+      "categories": "kali-voip",
+      "glyph": "tool"
+    },
+    "kali-wafw00f": {
+      "name": "wafw00f",
+      "categories": "kali-network-security-appliances",
+      "glyph": "shield-check"
+    },
+    "kali-wapiti": {
+      "name": "wapiti",
+      "categories": "kali-web-vulnerability-scanning;kali-identify",
+      "glyph": "bug"
+    },
+    "kali-wash": {
+      "name": "wash",
+      "categories": "kali-wifi",
+      "glyph": "wifi"
+    },
+    "kali-webshells": {
+      "name": "webshells",
+      "categories": "kali-persistence",
+      "glyph": "file-code"
+    },
+    "kali-weevely": {
+      "name": "weevely",
+      "categories": "kali-persistence",
+      "glyph": "terminal-2"
+    },
+    "kali-wfuzz": {
+      "name": "wfuzz",
+      "categories": "kali-web-scanning",
+      "glyph": "filter"
+    },
+    "kali-whatweb": {
+      "name": "whatweb",
+      "categories": "kali-web-vulnerability-scanning",
+      "glyph": "eye-check"
+    },
+    "kali-wifite": {
+      "name": "wifite",
+      "categories": "kali-wifi-credential-access",
+      "glyph": "wifi"
+    },
+    "kali-winpeas": {
+      "name": "winpeas",
+      "categories": "kali-privilege-escalation",
+      "glyph": "user-shield"
+    },
+    "kali-wordlists": {
+      "name": "wordlists",
+      "categories": "kali-password-profiling-wordlists;kali-credential-access",
+      "glyph": "list-check"
+    },
+    "kali-wpscan": {
+      "name": "wpscan",
+      "categories": "kali-web-vulnerability-scanning",
+      "glyph": "brand-wordpress"
+    },
+    "kali-www": {
+      "name": "Kali Linux",
+      "categories": "kali-kali-offsec-links",
+      "glyph": "world"
+    },
+    "hwloc": {
+      "name": "Hardware Locality lstopo",
+      "categories": "System;Monitor;",
+      "glyph": "cpu"
+    },
+    "kali-minicom": {
+      "name": "minicom",
+      "categories": "kali-application-layer-protocol",
+      "glyph": "terminal-2"
+    },
+    "preferences-system-network": {
+      "name": "Advanced Network Configuration",
+      "categories": "GNOME;GTK;Settings;X-GNOME-NetworkSettings;X-GNOME-Utilities;",
+      "glyph": "network"
+    },
+    "offsec": {
+      "name": "OffSec Training",
+      "categories": "kali-kali-offsec-links",
+      "glyph": "school"
+    },
+    "ophcrack": {
+      "name": "ophcrack",
+      "categories": "kali-password-cracking;kali-credential-access",
+      "glyph": "hash"
+    },
+    "ibus-setup": {
+      "name": "IBus Preferences",
+      "categories": "Settings;",
+      "glyph": "keyboard"
+    },
+    "org.freedesktop.MalcontentControl": {
+      "name": "Parental Controls",
+      "categories": "GTK;GNOME;System;",
+      "glyph": "shield-lock"
+    },
+    "org.gnome.Calculator": {
+      "name": "Calculator",
+      "categories": "GNOME;GTK;Utility;Calculator;",
+      "glyph": "calculator"
+    },
+    "org.gnome.DiskUtility": {
+      "name": "Disks",
+      "categories": "GNOME;GTK;Utility;X-GNOME-Utilities;",
+      "glyph": "disc"
+    },
+    "org.gnome.Extensions": {
+      "name": "Extensions",
+      "categories": "GNOME;GTK;Utility;",
+      "glyph": "puzzle"
+    },
+    "org.gnome.FileRoller": {
+      "name": "File Roller",
+      "categories": "GTK;GNOME;Utility;Archiving;Compression;",
+      "glyph": "file-zip"
+    },
+    "org.gnome.Loupe": {
+      "name": "Image Viewer",
+      "categories": "GNOME;GTK;Graphics;2DGraphics;RasterGraphics;Viewer;",
+      "glyph": "photo"
+    },
+    "org.gnome.Nautilus": {
+      "name": "Files",
+      "categories": "GNOME;GTK;Utility;Core;FileManager;",
+      "glyph": "folder"
+    },
+    "org.gnome.Papers": {
+      "name": "Document Viewer",
+      "categories": "GNOME;GTK;Office;Viewer;Graphics;2DGraphics;VectorGraphics;",
+      "glyph": "file-text"
+    },
+    "org.gnome.Screenshot": {
+      "name": "Screenshot",
+      "categories": "GTK;GNOME;Utility;X-GNOME-Utilities;",
+      "glyph": "screenshot"
+    },
+    "org.gnome.Settings": {
+      "name": "Settings",
+      "categories": "GNOME;GTK;Settings;",
+      "glyph": "settings"
+    },
+    "org.gnome.Showtime": {
+      "name": "Video Player",
+      "categories": "AudioVideo;Video;Player;GNOME;GTK;",
+      "glyph": "movie"
+    },
+    "org.gnome.Terminal": {
+      "name": "Terminal",
+      "categories": "GNOME;GTK;System;TerminalEmulator;Utility;X-GNOME-Utilities;",
+      "glyph": "terminal-2"
+    },
+    "org.gnome.TextEditor": {
+      "name": "Text Editor",
+      "categories": "GNOME;GTK;Utility;TextEditor;",
+      "glyph": "file-text"
+    },
+    "org.gnome.Yelp": {
+      "name": "Help",
+      "categories": "GNOME;GTK;Core;Documentation;Utility;",
+      "glyph": "help"
+    },
+    "org.gnome.tweaks": {
+      "name": "Tweaks",
+      "categories": "GNOME;GTK;Settings;",
+      "glyph": "adjustments"
+    },
+    "org.gtk.Demo4": {
+      "name": "GTK Demo",
+      "categories": "Development;GTK;",
+      "glyph": "brand-html5"
+    },
+    "org.gtk.PrintEditor4": {
+      "name": "Print Editor",
+      "categories": "Development;GTK;",
+      "glyph": "printer"
+    },
+    "org.gtk.WidgetFactory4": {
+      "name": "Widget Factory",
+      "categories": "Development;GTK;",
+      "glyph": "apps"
+    },
+    "org.gtk.gtk4.NodeEditor": {
+      "name": "Node Editor",
+      "categories": "Development;GTK;",
+      "glyph": "binary-tree"
+    },
+    "org.wireshark.Wireshark": {
+      "name": "wireshark",
+      "categories": "kali-network-sniffing;kali-discovery;kali-respond",
+      "glyph": "wave-sine"
+    },
+    "preferences-desktop-theme": {
+      "name": "Qt6 Settings",
+      "categories": "Settings;DesktopSettings;Qt;",
+      "glyph": "adjustments"
+    },
+    "utilities-root-terminal": {
+      "name": "Root Terminal Emulator",
+      "categories": "System;Utility;TerminalEmulator;kali-services-and-other-tools",
+      "glyph": "terminal-2"
+    },
+    "sqlitebrowser": {
+      "name": "sqlitebrowser",
+      "categories": "kali-databases",
+      "glyph": "database"
+    },
+    "printer": {
+      "name": "Print Settings",
+      "categories": "GNOME;GTK;Settings;HardwareSettings;X-GNOME-Settings-Panel;X-Unity-Settings-Panel;System;Printing;",
+      "glyph": "printer"
+    },
+    "terminator": {
+      "name": "Terminator",
+      "categories": "GNOME;GTK;Utility;TerminalEmulator;System;",
+      "glyph": "terminal-2"
+    },
+    "gvim": {
+      "name": "Vim",
+      "categories": "Utility;TextEditor;",
+      "glyph": "code"
+    },
+    "vulnhub": {
+      "name": "VulnHub",
+      "categories": "kali-kali-offsec-links",
+      "glyph": "world"
+    },
+    "accessories-text-editor": {
+      "name": "Text Editor",
+      "categories": "Utility;TextEditor;",
+      "glyph": "file-text"
+    },
+    "FreeRDP": {
+      "name": "xfreerdp",
+      "categories": "GTK;GNOME;X-GNOME-NetworkSettings;Network;",
+      "glyph": "device-desktop"
+    },
+    "kali-xfreerdp3": {
+      "name": "xfreerdp3",
+      "categories": "kali-pass-the-hash;kali-pass-the-hash;kali-lateral-movement;kali-application-layer-protocol",
+      "glyph": "device-desktop"
+    },
+    "kali-zenmap-root": {
+      "name": "zenmap-root",
+      "categories": "hidden",
+      "glyph": "radar-2"
+    },
+    "kali-zenmap": {
+      "name": "zenmap",
+      "categories": "kali-network-information;kali-vulnerability-scanning;kali-reconnaissance;kali-network-service-discovery;kali-discovery",
+      "glyph": "radar-2"
+    }
+  }
+}

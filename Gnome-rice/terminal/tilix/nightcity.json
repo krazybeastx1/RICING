@@ -1,0 +1,25 @@
+{
+  "name": "NIGHT CITY",
+  "comment": "Beyond the system. Into the city.",
+  "use-theme-colors": false,
+  "foreground-color": "#E8EAF0",
+  "background-color": "#08090D",
+  "palette": [
+    "#101218",
+    "#FF1744",
+    "#A6E3A1",
+    "#F9E2AF",
+    "#89B4FA",
+    "#CBA6F7",
+    "#00E5FF",
+    "#E8EAF0",
+    "#343B49",
+    "#FF3D81",
+    "#B9EFB4",
+    "#FFE9B8",
+    "#A8C8FF",
+    "#DCC2FF",
+    "#66F0FF",
+    "#FFFFFF"
+  ]
+}

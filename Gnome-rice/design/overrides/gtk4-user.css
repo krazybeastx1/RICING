@@ -1,0 +1,532 @@
+/* ==========================================================================
+   NIGHT CITY — libadwaita user stylesheet
+   Installed to ~/.config/gtk-4.0/gtk.css by scripts/install.sh.
+
+   libadwaita applications do not load third-party GTK themes. This layer
+   redefines the named colours and surface selectors that libadwaita itself
+   uses, which is the only supported way to tint them without patching the
+   library. Delete this file (or run uninstall.sh) to return to stock Adwaita.
+
+   Token placeholders are expanded by scripts/build-theme.py.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CORE PALETTE — values consumed by libadwaita and by most GTK4 apps
+   -------------------------------------------------------------------------- */
+@define-color accent_bg_color {{colors.neon-red}};
+@define-color accent_fg_color {{colors.night-black}};
+@define-color accent_color #FF5C7E;
+
+@define-color window_bg_color {{colors.deep-carbon}};
+@define-color window_fg_color {{colors.soft-white}};
+@define-color view_bg_color {{colors.night-black}};
+@define-color view_fg_color {{colors.soft-white}};
+
+@define-color headerbar_bg_color {{colors.dark-graphite}};
+@define-color headerbar_fg_color {{colors.soft-white}};
+@define-color headerbar_border_color {{colors.border-gray}};
+@define-color headerbar_backdrop_color {{colors.deep-carbon}};
+@define-color headerbar_shade_color rgba(0, 0, 0, 0.45);
+@define-color headerbar_darker_shade_color rgba(0, 0, 0, 0.75);
+
+@define-color sidebar_bg_color {{colors.deep-carbon}};
+@define-color sidebar_fg_color {{colors.soft-white}};
+@define-color sidebar_backdrop_color #0C0E13;
+@define-color sidebar_shade_color rgba(0, 0, 0, 0.40);
+@define-color sidebar_border_color {{colors.border-gray}};
+
+@define-color secondary_sidebar_bg_color {{colors.dark-graphite}};
+@define-color secondary_sidebar_fg_color {{colors.soft-white}};
+@define-color secondary_sidebar_backdrop_color #13161D;
+@define-color secondary_sidebar_shade_color rgba(0, 0, 0, 0.40);
+@define-color secondary_sidebar_border_color {{colors.border-gray}};
+
+@define-color card_bg_color {{colors.dark-graphite}};
+@define-color card_fg_color {{colors.soft-white}};
+@define-color card_shade_color rgba(0, 0, 0, 0.45);
+
+@define-color dialog_bg_color {{colors.dark-graphite}};
+@define-color dialog_fg_color {{colors.soft-white}};
+
+@define-color popover_bg_color {{colors.dark-graphite}};
+@define-color popover_fg_color {{colors.soft-white}};
+@define-color popover_shade_color rgba(0, 0, 0, 0.45);
+
+@define-color shade_color rgba(0, 0, 0, 0.36);
+@define-color scrollbar_outline_color rgba(0, 0, 0, 0.65);
+
+@define-color theme_bg_color {{colors.deep-carbon}};
+@define-color theme_fg_color {{colors.soft-white}};
+@define-color theme_base_color {{colors.night-black}};
+@define-color theme_text_color {{colors.soft-white}};
+@define-color theme_selected_bg_color {{colors.neon-red}};
+@define-color theme_selected_fg_color {{colors.night-black}};
+
+@define-color borders {{colors.border-gray}};
+@define-color unfocused_borders #2A303C;
+@define-color insensitive_bg_color {{colors.dark-graphite}};
+@define-color insensitive_fg_color {{colors.muted-silver}};
+@define-color insensitive_base_color {{colors.deep-carbon}};
+
+@define-color destructive_bg_color {{colors.blood-red}};
+@define-color destructive_fg_color {{colors.soft-white}};
+@define-color destructive_color #FF8AA1;
+@define-color error_bg_color {{colors.blood-red}};
+@define-color error_fg_color {{colors.soft-white}};
+@define-color error_color #FF8AA1;
+@define-color success_bg_color #1E5B3A;
+@define-color success_fg_color {{colors.soft-white}};
+@define-color success_color {{colors.success}};
+@define-color warning_bg_color #6B4A12;
+@define-color warning_fg_color {{colors.soft-white}};
+@define-color warning_color {{colors.warning}};
+
+/* NightCity-local names for app authors */
+@define-color nc_accent {{colors.neon-red}};
+@define-color nc_accent_fg {{colors.night-black}};
+@define-color nc_cyan {{colors.holo-cyan}};
+@define-color nc_purple {{colors.electric-purple}};
+@define-color nc_surface {{colors.dark-graphite}};
+@define-color nc_surface_raised {{colors.industrial-steel}};
+@define-color nc_border {{colors.border-gray}};
+
+/* --------------------------------------------------------------------------
+   SURFACES
+   -------------------------------------------------------------------------- */
+window,
+.background {
+  background-color: {{colors.deep-carbon}};
+  color: {{colors.soft-white}};
+}
+
+headerbar {
+  background-color: {{colors.dark-graphite}};
+  background-image: linear-gradient(to bottom, {{colors.dark-graphite}}, {{colors.deep-carbon}});
+  color: {{colors.soft-white}};
+  border-bottom: {{geometry.border-width}} solid rgba(0, 0, 0, 0.55);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(255, 23, 68, 0.10);
+}
+
+headerbar:backdrop {
+  background-image: none;
+  background-color: {{colors.deep-carbon}};
+  color: {{colors.muted-silver}};
+  box-shadow: none;
+}
+
+headerbar .title {
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+}
+
+headerbar .subtitle {
+  color: {{colors.muted-silver}};
+}
+
+window.csd {
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  border-radius: {{geometry.radius-window}};
+}
+
+window.maximized,
+window.fullscreen,
+window.tiled,
+window.tiled-top,
+window.tiled-left,
+window.tiled-right,
+window.tiled-bottom {
+  border-radius: 0;
+  border-color: transparent;
+}
+
+/* --------------------------------------------------------------------------
+   BUTTONS
+   -------------------------------------------------------------------------- */
+button {
+  border-radius: {{geometry.radius-control}};
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  background-image: linear-gradient(to bottom, #222833, #1A1F28);
+  background-color: {{colors.industrial-steel}};
+  color: {{colors.soft-white}};
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+button:hover {
+  background-image: linear-gradient(to bottom, #2A313D, #222833);
+  border-color: #454D5D;
+}
+
+button:active,
+button:checked {
+  background-image: image({{colors.night-black}});
+  border-color: rgba(255, 23, 68, 0.55);
+  box-shadow: inset 0 0 0 1px rgba(255, 23, 68, 0.22);
+}
+
+button.flat,
+button.image-button.flat,
+headerbar windowcontrols button {
+  background: transparent;
+  background-image: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+button.flat:hover,
+button.image-button.flat:hover,
+headerbar windowcontrols button:hover {
+  background-color: rgba(255, 23, 68, 0.14);
+  border-color: rgba(255, 23, 68, 0.32);
+}
+
+headerbar windowcontrols button.close:hover {
+  background-color: {{colors.neon-red}};
+  border-color: {{colors.neon-red}};
+  color: {{colors.night-black}};
+}
+
+button.suggested-action {
+  background-image: linear-gradient(to bottom, {{colors.neon-red}}, {{colors.cyber-red}});
+  border-color: {{colors.cyber-red}};
+  color: {{colors.night-black}};
+  font-weight: 700;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.22), 0 0 16px rgba(255, 23, 68, 0.20);
+}
+
+button.suggested-action:hover {
+  background-image: linear-gradient(to bottom, #FF2E58, {{colors.neon-red}});
+  border-color: {{colors.neon-red}};
+}
+
+button.destructive-action {
+  background-image: linear-gradient(to bottom, {{colors.blood-red}}, #6E0C22);
+  border-color: #6E0C22;
+  color: {{colors.soft-white}};
+  font-weight: 700;
+}
+
+button.pill {
+  border-radius: {{geometry.radius-pill}};
+}
+
+button.circular,
+button.circular-button {
+  border-radius: {{geometry.radius-pill}};
+}
+
+/* --------------------------------------------------------------------------
+   ENTRIES / SEARCH
+   -------------------------------------------------------------------------- */
+entry,
+spinbutton {
+  border-radius: {{geometry.radius-control}};
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  background-color: {{colors.night-black}};
+  background-image: none;
+  color: {{colors.soft-white}};
+  caret-color: {{colors.neon-red}};
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.40);
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+entry:hover,
+spinbutton:hover {
+  border-color: #454D5D;
+}
+
+entry:focus,
+entry:focus-within,
+spinbutton:focus,
+spinbutton:focus-within {
+  border-color: {{colors.neon-red}};
+  box-shadow: inset 0 0 0 1px rgba(255, 23, 68, 0.30), 0 0 14px rgba(255, 23, 68, 0.16);
+}
+
+entry > text > placeholder {
+  color: {{colors.muted-silver}};
+  opacity: 1;
+}
+
+entry selection,
+label selection,
+textview > text selection {
+  background-color: {{colors.selection}};
+  color: {{colors.soft-white}};
+}
+
+entry.error,
+entry.error:focus {
+  border-color: {{colors.neon-red}};
+  color: {{colors.neon-pink}};
+}
+
+entry.warning,
+entry.warning:focus {
+  border-color: {{colors.warning}};
+  color: {{colors.warning}};
+}
+
+searchbar {
+  background-color: {{colors.deep-carbon}};
+  border-bottom: {{geometry.border-width}} solid {{colors.border-gray}};
+}
+
+/* --------------------------------------------------------------------------
+   CARDS / LISTS / SIDEBARS / VIEWS
+   -------------------------------------------------------------------------- */
+.card {
+  background-color: {{colors.dark-graphite}};
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  border-radius: {{geometry.radius-card}};
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+}
+
+.card.activatable:hover,
+.card.activatable:focus {
+  background-color: #1C212B;
+  border-color: rgba(255, 23, 68, 0.45);
+}
+
+list,
+listbox,
+listview,
+columnview,
+gridview,
+.view {
+  background-color: {{colors.night-black}};
+  color: {{colors.soft-white}};
+}
+
+listview > row,
+columnview > row,
+gridview > child,
+list > row,
+listbox > row {
+  border-radius: {{geometry.radius-control}};
+}
+
+listview > row:selected,
+columnview > row:selected,
+gridview > child:selected,
+list > row:selected,
+listbox > row:selected {
+  background-color: rgba(255, 23, 68, 0.20);
+  color: {{colors.soft-white}};
+  box-shadow: inset 2px 0 {{colors.neon-red}};
+}
+
+listview > row:hover,
+columnview > row:hover,
+gridview > child:hover,
+list > row:hover,
+listbox > row:hover {
+  background-color: rgba(232, 234, 240, 0.06);
+}
+
+.navigation-sidebar,
+.sidebar {
+  background-color: {{colors.deep-carbon}};
+  border-right: {{geometry.border-width}} solid {{colors.border-gray}};
+  color: {{colors.soft-white}};
+}
+
+.navigation-sidebar > row:selected {
+  background-color: rgba(255, 23, 68, 0.18);
+  color: {{colors.soft-white}};
+  box-shadow: inset 2px 0 {{colors.neon-red}};
+}
+
+.navigation-sidebar > row:hover {
+  background-color: rgba(232, 234, 240, 0.06);
+}
+
+columnview > header > button {
+  background-color: {{colors.dark-graphite}};
+  background-image: none;
+  border-color: {{colors.border-gray}};
+  border-radius: 0;
+  color: {{colors.muted-silver}};
+  box-shadow: none;
+}
+
+/* --------------------------------------------------------------------------
+   POPOVERS / MENUS / DROPDOWNS
+   -------------------------------------------------------------------------- */
+popover > contents,
+popover.menu > contents {
+  background-color: {{colors.dark-graphite}};
+  color: {{colors.soft-white}};
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  border-radius: {{geometry.radius-card}};
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.60);
+}
+
+popover > arrow {
+  background-color: {{colors.dark-graphite}};
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+}
+
+popover.menu modelbutton {
+  border-radius: 5px;
+  color: {{colors.soft-white}};
+}
+
+popover.menu modelbutton:hover {
+  background-color: rgba(255, 23, 68, 0.16);
+}
+
+dropdown > popover.menu > contents {
+  padding: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   CONTROLS
+   -------------------------------------------------------------------------- */
+switch {
+  background-color: {{colors.industrial-steel}};
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+}
+
+switch:checked {
+  background-color: {{colors.neon-red}};
+  border-color: {{colors.neon-red}};
+}
+
+switch > slider {
+  background-color: {{colors.soft-white}};
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.50);
+}
+
+switch:checked > slider {
+  background-color: {{colors.night-black}};
+}
+
+checkbutton check,
+checkbutton radio {
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  background-color: {{colors.night-black}};
+  color: {{colors.soft-white}};
+}
+
+checkbutton check {
+  border-radius: 4px;
+}
+
+checkbutton radio {
+  border-radius: {{geometry.radius-pill}};
+}
+
+checkbutton check:checked,
+checkbutton check:indeterminate,
+checkbutton radio:checked,
+checkbutton radio:indeterminate {
+  background-color: {{colors.neon-red}};
+  border-color: {{colors.neon-red}};
+  color: {{colors.night-black}};
+}
+
+scale > trough {
+  background-color: {{colors.industrial-steel}};
+}
+
+scale > trough > highlight {
+  background-color: {{colors.neon-red}};
+}
+
+progressbar > trough {
+  background-color: {{colors.industrial-steel}};
+}
+
+progressbar > trough > progress {
+  background-color: {{colors.neon-red}};
+  box-shadow: 0 0 12px rgba(255, 23, 68, 0.40);
+}
+
+levelbar block.low {
+  background-color: {{colors.warning}};
+}
+
+levelbar block.high,
+levelbar block.full {
+  background-color: {{colors.success}};
+}
+
+levelbar block.empty {
+  background-color: {{colors.industrial-steel}};
+}
+
+scrollbar slider {
+  background-color: #4A5160;
+  border: 3px solid transparent;
+  border-radius: {{geometry.radius-pill}};
+  background-clip: padding-box;
+}
+
+scrollbar slider:hover {
+  background-color: #5F6879;
+}
+
+scrollbar slider:active {
+  background-color: {{colors.neon-red}};
+}
+
+/* --------------------------------------------------------------------------
+   FEEDBACK / TYPOGRAPHY / LINKS
+   -------------------------------------------------------------------------- */
+tooltip {
+  background-color: {{colors.dark-graphite}};
+  color: {{colors.soft-white}};
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+}
+
+.dim-label,
+.subtitle {
+  color: {{colors.muted-silver}};
+  opacity: 1;
+}
+
+link,
+.link {
+  color: {{colors.holo-cyan}};
+}
+
+link:hover {
+  color: #66F0FF;
+}
+
+link:visited {
+  color: {{colors.electric-purple}};
+}
+
+.large-title {
+  font-family: "Orbitron", "Rajdhani", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.title-1, .title-2, .title-3, .title-4 {
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+*:focus-visible {
+  outline-color: rgba(255, 23, 68, 0.80);
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: -2px;
+}
+
+:drop(active) {
+  border-color: {{colors.holo-cyan}};
+  box-shadow: inset 0 0 0 1px {{colors.holo-cyan}};
+}
+
+.nc-accent-bar {
+  background-image: linear-gradient(to right, {{colors.neon-red}}, {{colors.electric-purple}}, {{colors.holo-cyan}});
+  min-height: 2px;
+}

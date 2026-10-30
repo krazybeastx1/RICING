@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=NIGHT CITY
+Description=Beyond the system. Into the city.
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/NightCity-Plymouth
+ScriptFile=/usr/share/plymouth/themes/NightCity-Plymouth/nightcity.script

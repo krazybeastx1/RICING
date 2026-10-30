@@ -1,0 +1,32 @@
+# NIGHT CITY — GNOME Terminal profile (dconf fragment)
+#
+# Install with:
+#   dconf load /org/gnome/terminal/legacy/profiles:/:6e696768-7420-4369-7479-000000000001/ \
+#     < terminal/gnome-terminal/nightcity.dconf
+# then select the "NIGHT CITY" profile in Preferences, or make it default:
+#   gsettings set org.gnome.Terminal.ProfilesList default \
+#     '6e696768-7420-4369-7479-000000000001'
+#
+# The fixed UUID keeps repeated installs idempotent.
+
+[/]
+visible-name='NIGHT CITY'
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=true
+background-transparency-percent=6
+use-system-font=false
+font='JetBrains Mono 11'
+foreground-color='#E8EAF0'
+background-color='#08090D'
+bold-color-same-as-fg=true
+bold-color='#FFFFFF'
+cursor-colors-set=true
+cursor-background-color='#FF1744'
+cursor-foreground-color='#08090D'
+highlight-colors-set=true
+highlight-background-color='#57202F'
+highlight-foreground-color='#E8EAF0'
+palette=['#101218', '#FF1744', '#A6E3A1', '#F9E2AF', '#89B4FA', '#CBA6F7', '#00E5FF', '#E8EAF0', '#343B49', '#FF3D81', '#B9EFB4', '#FFE9B8', '#A8C8FF', '#DCC2FF', '#66F0FF', '#FFFFFF']
+scrollback-lines=10000
+scrollbar-policy='automatic'

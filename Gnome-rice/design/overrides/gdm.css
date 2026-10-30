@@ -1,0 +1,84 @@
+/* ==========================================================================
+   NIGHT CITY — GDM / login layer
+   Appended only when building the greeter stylesheet. GDM cannot load user
+   themes, so the shell theme is compiled into the system gresource instead.
+   ========================================================================== */
+
+/* The greeter has no desktop background actor: paint the city ourselves. */
+#lockDialogGroup {
+  background-image: url("file:///usr/share/backgrounds/nightcity/nightline.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: {{colors.night-black}};
+}
+
+/* Keep the clock legible over the skyline. */
+.unlock-dialog-clock .unlock-dialog-clock-time {
+  color: {{colors.soft-white}};
+  text-shadow: 0 0 36px rgba(255, 23, 68, 0.45), 0 2px 18px rgba(0, 0, 0, 0.85);
+}
+
+.unlock-dialog-clock .unlock-dialog-clock-date,
+.unlock-dialog-clock .unlock-dialog-clock-hint {
+  color: {{colors.soft-white}};
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.90);
+}
+
+/* Login panel: a single glass bar instead of the full desktop panel. */
+#panel.login-screen {
+  background-color: rgba(8, 9, 13, 0.55);
+  border-bottom: 1px solid rgba(255, 23, 68, 0.35);
+  box-shadow: none;
+}
+
+/* User list / prompt card */
+.login-dialog .login-dialog-prompt-layout,
+.unlock-dialog .login-dialog-prompt-layout,
+.login-dialog .login-dialog-user-list,
+.unlock-dialog .login-dialog-user-list {
+  background-color: rgba(8, 9, 13, 0.72);
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  border-radius: {{geometry.radius-card}};
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.70);
+  padding: 24px;
+}
+
+.login-dialog .login-dialog-prompt-entry,
+.unlock-dialog .login-dialog-prompt-entry {
+  min-height: 34px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11pt;
+}
+
+/* The session chooser and a11y menu stay quiet and readable. */
+.login-dialog .login-dialog-session-list,
+.login-dialog .login-dialog-not-listed-button,
+.login-dialog .login-dialog-button {
+  background-color: rgba(16, 18, 24, 0.90);
+}
+
+/* GDM's "not listed?" and cancel buttons */
+.login-dialog-button.cancel-button {
+  border-color: rgba(255, 23, 68, 0.45);
+}
+
+.login-dialog-button.cancel-button:hover {
+  background-color: {{colors.neon-red}};
+  color: {{colors.night-black}};
+}
+
+/* Accessibility always wins over aesthetics. */
+@media (prefers-contrast: more) {
+  #lockDialogGroup {
+    background-image: none;
+    background-color: {{colors.night-black}};
+  }
+  .login-dialog .login-dialog-prompt-layout,
+  .unlock-dialog .login-dialog-prompt-layout,
+  .login-dialog .login-dialog-user-list,
+  .unlock-dialog .login-dialog-user-list {
+    background-color: {{colors.night-black}};
+    border-color: {{colors.soft-white}};
+  }
+}

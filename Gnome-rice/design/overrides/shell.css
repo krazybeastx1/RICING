@@ -1,0 +1,1409 @@
+/* ==========================================================================
+   NIGHT CITY — GNOME Shell 50 surface treatment
+   Token template: {{colors.*}} / {{alpha.*}} are expanded by build-theme.py
+   ========================================================================== */
+
+stage {
+  font-family: "Space Grotesk", "Cantarell", sans-serif;
+  color: {{colors.soft-white}};
+  font-feature-settings: "tnum";
+}
+
+/* --------------------------------------------------------------------------
+   TOP PANEL — NIGHT CITY rebuild
+   Target: GNOME Shell 50 (Adwaita dark base)
+   -------------------------------------------------------------------------- */
+
+/* Panel container — carbon black, 92% opacity, thin red bottom border, 32px height */
+#panel {
+  background-color: rgba(8, 9, 13, 0.92);
+  border-bottom: 1px solid {{colors.neon-red}};
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
+  height: 32px;
+  font-family: "Space Grotesk", "Cantarell", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Activities / NIGHTCITY branding button — leftmost */
+#panel .panel-button#panelActivities {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  min-width: 0;
+  padding: 0 16px;
+  transition: background-color 150ms ease;
+}
+
+#panel .panel-button#panelActivities > .box > .label {
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: {{colors.neon-red}};
+  padding: 0;
+}
+
+#panel .panel-button#panelActivities:hover,
+#panel .panel-button#panelActivities:focus {
+  background-color: rgba(255, 23, 68, 0.08);
+  border-radius: 4px;
+}
+
+#panel .panel-button#panelActivities:hover > .box > .label,
+#panel .panel-button#panelActivities:focus > .box > .label {
+  color: {{colors.neon-red}};
+  text-shadow: 0 0 12px rgba(255, 23, 68, 0.55);
+}
+
+/* Hide the original workspace-dot; we use text branding */
+#panel .panel-button#panelActivities .workspace-dot {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* App menu / window title — center-left (when present) */
+#panel .panel-button.app-menu {
+  padding: 0 12px;
+  transition: background-color 150ms ease;
+}
+
+#panel .panel-button.app-menu > .box > .label {
+  font-family: "Space Grotesk", "Cantarell", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: {{colors.soft-white}};
+  padding: 0 4px;
+}
+
+#panel .panel-button.app-menu:hover,
+#panel .panel-button.app-menu:focus {
+  background-color: rgba(255, 23, 68, 0.08);
+  border-radius: 4px;
+}
+
+#panel .panel-button.app-menu:hover > .box > .label,
+#panel .panel-button.app-menu:focus > .box > .label {
+  color: {{colors.neon-red}};
+}
+
+/* Clock / date — center */
+#panel .panel-button.clock-display {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none;
+  padding: 0 8px;
+  transition: background-color 150ms ease;
+}
+
+#panel .panel-button.clock-display > .box {
+  padding: 0 4px;
+}
+
+#panel .panel-button.clock-display > .box > .clock {
+  font-family: "JetBrains Mono", "Monospace", monospace;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: {{colors.soft-white}};
+  padding: 0 6px;
+}
+
+#panel .panel-button.clock-display:hover,
+#panel .panel-button.clock-display:focus {
+  background-color: rgba(255, 23, 68, 0.08);
+  border-radius: 4px;
+}
+
+#panel .panel-button.clock-display:hover > .box > .clock,
+#panel .panel-button.clock-display:focus > .box > .clock {
+  color: {{colors.neon-red}};
+}
+
+/* System status area — right side */
+#panel .system-status-icon,
+#panel .panel-status-indicators-box .system-status-icon {
+  color: {{colors.muted-silver}};
+  transition: color 120ms ease;
+}
+
+#panel .panel-status-indicators-box {
+  spacing: 6px;
+}
+
+#panel .panel-button.system-status-button {
+  padding: 0 6px;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  transition: background-color 120ms ease;
+}
+
+#panel .panel-button.system-status-button:hover,
+#panel .panel-button.system-status-button:focus {
+  background-color: rgba(255, 23, 68, 0.08);
+}
+
+#panel .panel-button.system-status-button:hover .system-status-icon,
+#panel .panel-button.system-status-button:focus .system-status-icon {
+  color: {{colors.neon-red}};
+}
+
+#panel .panel-button.system-status-button:checked,
+#panel .panel-button.system-status-button:active {
+  background-color: rgba(255, 23, 68, 0.16);
+}
+
+#panel .panel-button.system-status-button:checked .system-status-icon,
+#panel .panel-button.system-status-button:active .system-status-icon {
+  color: {{colors.neon-red}};
+}
+
+/* Power / battery — cyan accent */
+#panel .power-status.panel-status-indicators-box {
+  color: {{colors.holo-cyan}};
+}
+
+#panel .panel-button.power-status-button {
+  padding: 0 8px;
+}
+
+#panel .panel-button.power-status-button .system-status-icon {
+  color: {{colors.holo-cyan}};
+}
+
+#panel .panel-button.power-status-button:hover .system-status-icon,
+#panel .panel-button.power-status-button:focus .system-status-icon {
+  color: {{colors.neon-red}};
+}
+
+/* Panel active/overview/unlock states — minimal */
+#panel:overview,
+#panel.unlock-screen,
+#panel.login-screen {
+  background-color: transparent;
+  border-bottom-color: transparent;
+  box-shadow: none;
+}
+
+/* Generic panel button states — complete interaction matrix */
+#panel .panel-button {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: none !important;
+  -natural-hpadding: 10px;
+  transition: background-color 150ms ease, border-color 150ms ease, color 120ms ease;
+}
+
+#panel .panel-button:hover,
+#panel .panel-button:focus {
+  background-color: rgba(255, 23, 68, 0.08);
+  border-color: rgba(255, 23, 68, 0.28);
+  box-shadow: none !important;
+}
+
+#panel .panel-button:active,
+#panel .panel-button:checked {
+  background-color: rgba(255, 23, 68, 0.16);
+  border-color: rgba(255, 23, 68, 0.52);
+  box-shadow: inset 0 -2px 0 {{colors.neon-red}} !important;
+}
+
+#panel .panel-button:disabled {
+  color: rgba(232, 234, 240, 0.4);
+  background-color: transparent;
+}
+
+/* --------------------------------------------------------------------------
+   POPUP SHELL / QUICK SETTINGS — NIGHT CITY redesign
+   Target: GNOME Shell 50 Quick Settings (QuickSettingsMenu)
+   -------------------------------------------------------------------------- */
+.popup-menu-content,
+.candidate-popup-content {
+  background-color: {{alpha.surface-strong}};
+  border: 1px solid {{alpha.border}};
+  border-radius: 10px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.62), 0 0 0 1px rgba(255, 23, 68, 0.06);
+  padding: 6px;
+}
+
+.popup-menu-item {
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: {{colors.soft-white}};
+  transition-duration: 120ms;
+}
+
+.popup-menu-item:hover,
+.popup-menu-item:focus,
+.popup-menu-item:selected {
+  background-color: rgba(255, 23, 68, 0.16);
+  color: {{colors.soft-white}};
+}
+
+.popup-menu-item:active {
+  background-color: rgba(255, 23, 68, 0.26);
+}
+
+.popup-separator-menu-item {
+  background-color: {{colors.border-gray}};
+  height: 1px;
+  margin: 6px 8px;
+}
+
+/* Quick Settings outer panel — NC_CARBON surface, NC_STEEL border, 8px radius */
+.quick-settings {
+  background-color: rgba(16, 18, 24, 0.96);
+  border: 1px solid {{colors.industrial-steel}};
+  border-radius: 8px;
+  box-shadow: 0 24px 72px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 23, 68, 0.05);
+  padding: 16px;
+}
+
+.quick-settings-grid {
+  spacing-rows: 12px;
+  spacing-columns: 12px;
+}
+
+/* Quick Settings tiles — Wi-Fi, Bluetooth, Airplane, Dark Mode, Night Light, VPN, Audio, Power, DND */
+.quick-toggle,
+.quick-toggle-has-menu {
+  background-color: {{colors.dark-graphite}};
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 8px;
+  box-shadow: none;
+  min-height: 3.5em;
+  padding: 8px 12px;
+  transition: background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.quick-toggle:hover,
+.quick-toggle-has-menu:hover {
+  background-color: {{colors.industrial-steel}};
+  border-color: rgba(255, 23, 68, 0.55);
+}
+
+.quick-toggle:checked,
+.quick-toggle-has-menu:checked {
+  background-color: rgba(255, 23, 68, 0.18);
+  border-color: {{colors.neon-red}};
+  color: {{colors.soft-white}};
+  box-shadow: 0 0 20px rgba(255, 23, 68, 0.25), inset 0 0 0 1px rgba(255, 23, 68, 0.3);
+}
+
+.quick-toggle:checked .quick-toggle-title,
+.quick-toggle:checked .quick-toggle-subtitle,
+.quick-toggle:checked .quick-toggle-icon,
+.quick-toggle-has-menu:checked .quick-toggle-title,
+.quick-toggle-has-menu:checked .quick-toggle-icon {
+  color: {{colors.neon-red}};
+}
+
+.quick-toggle:focus,
+.quick-toggle-has-menu:focus {
+  box-shadow: inset 0 0 0 2px rgba(255, 23, 68, 0.70);
+  border-color: {{colors.neon-red}};
+}
+
+.quick-toggle-title {
+  font-family: "Space Grotesk", "Cantarell", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: {{colors.soft-white}};
+}
+
+.quick-toggle-subtitle {
+  font-family: "Space Grotesk", "Cantarell", sans-serif;
+  font-size: 11px;
+  color: {{colors.muted-silver}};
+}
+
+.quick-toggle-icon {
+  color: {{colors.muted-silver}};
+}
+
+.quick-toggle:checked .quick-toggle-icon {
+  color: {{colors.neon-red}};
+}
+
+.quick-toggle-has-menu .quick-toggle-menu-button {
+  background-color: {{colors.industrial-steel}};
+  border-left: 1px solid {{colors.border-gray}};
+  color: {{colors.soft-white}};
+  border-radius: 0 8px 8px 0;
+}
+
+.quick-toggle-has-menu .quick-toggle-menu-button:hover {
+  background-color: #2E3542;
+  border-left-color: rgba(255, 23, 68, 0.55);
+}
+
+.quick-toggle-has-menu .quick-toggle-menu-button:checked {
+  background-color: {{colors.cyber-red}};
+  color: {{colors.night-black}};
+  border-left-color: {{colors.cyber-red}};
+}
+
+.quick-toggle-has-menu .quick-toggle-separator {
+  background-color: rgba(232, 234, 240, 0.12);
+}
+
+/* Quick Settings submenus (Wi-Fi, Bluetooth, etc.) */
+.quick-toggle-menu {
+  background-color: {{alpha.surface-strong}};
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 12px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.65);
+  color: {{colors.soft-white}};
+  padding: 8px;
+}
+
+.quick-toggle-menu .header {
+  padding: 8px 12px;
+  margin-bottom: 4px;
+}
+
+.quick-toggle-menu .header .icon {
+  background-color: rgba(255, 23, 68, 0.12);
+  color: {{colors.neon-red}};
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.quick-toggle-menu .header .icon.active {
+  background-color: {{colors.neon-red}};
+  color: {{colors.night-black}};
+}
+
+.quick-toggle-menu .header .title {
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: {{colors.soft-white}};
+}
+
+.quick-toggle-menu .header .subtitle {
+  font-family: "Space Grotesk", "Cantarell", sans-serif;
+  font-size: 11px;
+  color: {{colors.muted-silver}};
+}
+
+.quick-toggle-menu .list-search-result,
+.quick-toggle-menu .search-provider-icon {
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.quick-toggle-menu .list-search-result:hover,
+.quick-toggle-menu .search-provider-icon:hover {
+  background-color: rgba(255, 23, 68, 0.12);
+}
+
+/* Brightness and Audio sliders — track: NC_STEEL, fill: NC_RED, thumb: NC_RED */
+.quick-slider .slider-bin {
+  background-color: {{colors.industrial-steel}};
+  border-radius: 999px;
+  border: 1px solid {{colors.border-gray}};
+}
+
+.quick-slider .slider-bin:focus {
+  background-color: rgba(255, 23, 68, 0.12);
+  border-color: {{colors.neon-red}};
+  box-shadow: inset 0 0 0 1px rgba(255, 23, 68, 0.55);
+}
+
+.slider {
+  color: {{colors.soft-white}};
+  -barlevel-height: 6px;
+  -barlevel-background-color: {{colors.industrial-steel}};
+  -barlevel-active-background-color: {{colors.neon-red}};
+  -barlevel-overdrive-color: {{colors.neon-pink}};
+  -barlevel-overdrive-separator-width: 1px;
+  -slider-handle-radius: 0.65em;
+}
+
+.slider:hover {
+  color: #FFFFFF;
+}
+
+/* Battery and system information */
+.quick-settings-system-item {
+  padding: 4px 0;
+}
+
+.quick-settings-system-item .system-status-icon {
+  color: {{colors.holo-cyan}};
+}
+
+.quick-settings-system-item .quick-toggle-title {
+  color: {{colors.soft-white}};
+}
+
+.quick-settings-system-item .quick-toggle-subtitle {
+  color: {{colors.muted-silver}};
+}
+
+.quick-settings-system-item .quick-toggle-subtitle:contains("%") {
+  color: {{colors.holo-cyan}};
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Toggle switches */
+.toggle-switch {
+  background-color: {{colors.industrial-steel}};
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 999px;
+  min-width: 44px;
+  min-height: 24px;
+}
+
+.toggle-switch:checked {
+  background-color: {{colors.neon-red}};
+  border-color: {{colors.neon-red}};
+  color: {{colors.night-black}};
+}
+
+.toggle-switch .handle {
+  background-color: {{colors.soft-white}};
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+
+.toggle-switch:checked .handle {
+  background-color: {{colors.night-black}};
+}
+
+/* System status / information accents */
+.device-subtitle,
+.quick-toggle .quick-toggle-subtitle {
+  color: {{colors.muted-silver}};
+}
+
+.nm-network-item .wireless-secure-icon,
+.quick-settings-system-item .system-status-icon {
+  color: {{colors.holo-cyan}};
+}
+
+/* --------------------------------------------------------------------------
+   CALENDAR / NOTIFICATIONS — NIGHT CITY redesign
+   Target: GNOME Shell 50 Calendar (Calendar) & Notifications (MessageList)
+   -------------------------------------------------------------------------- */
+
+/* Calendar popup — NC_GRAPHITE background, red month heading, clean grid */
+.calendar,
+.datemenu-today-button {
+  background-color: {{colors.dark-graphite}};
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.70);
+  padding: 8px;
+}
+
+.calendar .calendar-month-header {
+  padding: 8px 0 4px 0;
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgba(52, 59, 73, 0.5);
+}
+
+.calendar .calendar-month-header .calendar-month-label {
+  color: {{colors.neon-red}} !important;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.calendar .calendar-month-header .pager-button {
+  border-radius: 6px;
+  padding: 4px 8px;
+  color: {{colors.muted-silver}};
+  background-color: transparent;
+  transition: background-color 100ms ease, color 100ms ease;
+}
+
+.calendar .calendar-month-header .pager-button:hover,
+.calendar .calendar-month-header .pager-button:focus {
+  background-color: rgba(255, 23, 68, 0.12);
+  color: {{colors.neon-red}};
+}
+
+.calendar .calendar-day {
+  border-radius: 999px;
+  color: {{colors.soft-white}};
+  font-family: "Space Grotesk", "Cantarell", sans-serif;
+  font-size: 13px;
+  min-width: 30px;
+  min-height: 30px;
+  padding: 4px;
+  transition: background-color 100ms ease, color 100ms ease;
+}
+
+.calendar .calendar-day.calendar-weekend {
+  color: {{colors.muted-silver}};
+}
+
+.calendar .calendar-day.calendar-other-month {
+  color: rgba(146, 153, 168, 0.35);
+}
+
+.calendar .calendar-day:hover,
+.calendar .calendar-day:focus {
+  background-color: rgba(255, 23, 68, 0.14);
+  color: {{colors.neon-red}};
+}
+
+.calendar .calendar-day.calendar-today {
+  background-color: {{colors.neon-red}} !important;
+  background-image: none !important;
+  color: {{colors.night-black}} !important;
+  font-weight: 600;
+  box-shadow: 0 0 16px rgba(255, 23, 68, 0.45);
+}
+
+.calendar .calendar-day.calendar-today.calendar-day-with-events {
+  background-image: none !important;
+}
+
+.calendar .calendar-day.calendar-day-with-events {
+  background-image: none !important;
+  box-shadow: inset 0 -2px 0 {{colors.holo-cyan}};
+}
+
+.calendar .calendar-day-heading {
+  color: {{colors.muted-silver}};
+  font-family: "Rajdhani", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 4px 0;
+}
+
+/* Calendar selected date (when clicked) */
+.calendar .calendar-day:selected,
+.calendar .calendar-day:checked {
+  background-color: rgba(255, 23, 68, 0.22);
+  color: {{colors.soft-white}};
+  box-shadow: inset 0 0 0 2px {{colors.neon-red}};
+}
+
+/* Events / World Clocks / Weather buttons in calendar */
+.events-button .events-box .events-title,
+.weather-button .weather-box .weather-header-box .weather-header,
+.world-clocks-button .world-clocks-header {
+  color: {{colors.holo-cyan}};
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.events-button,
+.world-clocks-button,
+.weather-button {
+  background-color: {{colors.dark-graphite}};
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 12px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.65);
+  padding: 12px;
+}
+
+.events-button:hover,
+.world-clocks-button:hover,
+.weather-button:hover {
+  background-color: #1C212B;
+  border-color: rgba(255, 23, 68, 0.4);
+}
+
+/* Notification cards — NC_CARBON background, red left stripe, clean padding */
+.message {
+  background-color: {{colors.deep-carbon}};
+  border: 1px solid {{colors.border-gray}};
+  border-left: 3px solid {{colors.neon-red}};
+  border-radius: 8px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+  padding: 12px;
+  margin: 4px 0;
+}
+
+.message.critical {
+  border-left-color: {{colors.neon-pink}};
+  background-color: #1E1219;
+  border-color: rgba(255, 61, 129, 0.5);
+}
+
+.message .message-header {
+  color: {{colors.muted-silver}};
+  font-family: "Space Grotesk", "Cantarell", sans-serif;
+  font-size: 11px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(52, 59, 73, 0.4);
+  margin-bottom: 8px;
+}
+
+.message .message-header .message-source-title {
+  color: {{colors.soft-white}};
+  font-family: "Space Grotesk", "Cantarell", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.message .message-header .message-time {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  color: {{colors.muted-silver}};
+}
+
+.message .message-body {
+  color: {{colors.soft-white}};
+  font-family: "Space Grotesk", "Cantarell", sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Notification banner (toast) */
+.notification-banner {
+  background-color: {{colors.deep-carbon}};
+  border: 1px solid {{colors.border-gray}};
+  border-left: 4px solid {{colors.neon-red}};
+  border-radius: 10px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.65);
+  padding: 12px 16px;
+}
+
+.notification-banner .notification-body {
+  color: {{colors.soft-white}};
+  font-family: "Space Grotesk", "Cantarell", sans-serif;
+  font-size: 13px;
+}
+
+.notification-banner .notification-title {
+  color: {{colors.neon-red}};
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+}
+
+/* Notification buttons */
+.notification-button,
+.message .message-header .message-expand-button,
+.message .message-header .message-close-button {
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: "Space Grotesk", "Cantarell", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: {{colors.muted-silver}};
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+
+.notification-button:hover,
+.message .message-header .message-expand-button:hover,
+.message .message-header .message-close-button:hover {
+  background-color: rgba(255, 23, 68, 0.12);
+  color: {{colors.neon-red}};
+  border-color: rgba(255, 23, 68, 0.3);
+}
+
+.notification-button:focus,
+.message .message-header .message-expand-button:focus,
+.message .message-header .message-close-button:focus {
+  box-shadow: inset 0 0 0 2px rgba(255, 23, 68, 0.6);
+  border-color: {{colors.neon-red}};
+  background-color: rgba(255, 23, 68, 0.12);
+  color: {{colors.neon-red}};
+}
+
+.notification-button:active,
+.message .message-header .message-expand-button:active,
+.message .message-header .message-close-button:active {
+  background-color: rgba(255, 23, 68, 0.2);
+}
+
+/* Notification list (history) */
+.message-list {
+  padding: 4px;
+}
+
+.message-list .message-list-controls {
+  color: {{colors.muted-silver}};
+  font-family: "Space Grotesk", "Cantarell", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 12px;
+}
+
+.message-list .message-list-placeholder {
+  color: {{colors.muted-silver}};
+  font-family: "Space Grotesk", "Cantarell", sans-serif;
+  font-size: 13px;
+  padding: 24px;
+  text-align: center;
+}
+
+.message-list .message {
+  margin: 2px 0;
+  border-radius: 8px;
+}
+
+.message-list .message:hover {
+  background-color: {{colors.dark-graphite}};
+  border-color: rgba(255, 23, 68, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   ACTIVITIES OVERVIEW / SEARCH / APP GRID
+   -------------------------------------------------------------------------- */
+#overviewGroup {
+  background-color: rgba(8, 9, 13, 0.55);
+}
+
+.search-entry {
+  background-color: {{colors.deep-carbon}};
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 999px;
+  color: {{colors.soft-white}};
+  padding: 7px 14px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.40);
+}
+
+.search-entry:focus,
+.search-entry:focus-within {
+  border-color: {{colors.neon-red}};
+  box-shadow: 0 0 0 1px rgba(255, 23, 68, 0.35), 0 0 22px rgba(255, 23, 68, 0.22);
+}
+
+.search-entry .search-entry-icon {
+  color: {{colors.neon-red}};
+}
+
+.search-section-content {
+  background-color: rgba(23, 27, 36, 0.92);
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 18px;
+}
+
+.list-search-result,
+.search-provider-icon {
+  border-radius: 10px;
+  color: {{colors.soft-white}};
+}
+
+.list-search-result:hover,
+.search-provider-icon:hover,
+.list-search-result:focus,
+.search-provider-icon:focus {
+  background-color: rgba(255, 23, 68, 0.14);
+}
+
+.search-statustext,
+.search-provider-icon .list-search-provider-content .list-search-provider-details {
+  color: {{colors.muted-silver}};
+}
+
+.overview-tile,
+.grid-search-result {
+  background-color: transparent;
+  border-radius: 14px;
+  color: {{colors.soft-white}};
+  transition-duration: 130ms;
+}
+
+.overview-tile:hover,
+.grid-search-result:hover {
+  background-color: rgba(255, 23, 68, 0.10);
+}
+
+.overview-tile:active,
+.overview-tile:focus,
+.grid-search-result:active,
+.grid-search-result:focus {
+  background-color: rgba(255, 23, 68, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(255, 23, 68, 0.48);
+}
+
+.overview-tile:selected,
+.overview-tile:checked,
+.grid-search-result:selected,
+.grid-search-result:checked {
+  background-color: rgba(255, 23, 68, 0.20);
+}
+
+.app-folder {
+  background-color: {{colors.dark-graphite}};
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 16px;
+}
+
+.app-folder:hover {
+  background-color: #1C212B;
+  border-color: rgba(255, 23, 68, 0.48);
+}
+
+.app-folder-dialog {
+  background-color: rgba(16, 18, 24, 0.98);
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 28px;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.72);
+}
+
+.app-grid-running-dot {
+  background-color: {{colors.neon-red}};
+  box-shadow: 0 0 8px rgba(255, 23, 68, 0.60);
+}
+
+/* --------------------------------------------------------------------------
+   DASH (native + Dash to Dock)
+   -------------------------------------------------------------------------- */
+#dash .dash-background {
+  background-color: rgba(23, 27, 36, 0.90);
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 18px;
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.55);
+}
+
+#dash .dash-item-container .overview-icon,
+#dash .dash-item-container .show-apps .overview-icon {
+  border-radius: 9px;
+  color: {{colors.soft-white}};
+  background-color: transparent;
+}
+
+#dash .dash-item-container .overview-tile:hover .overview-icon,
+#dash .dash-item-container .show-apps:hover .overview-icon {
+  background-color: rgba(255, 23, 68, 0.14);
+}
+
+#dash .dash-item-container .overview-tile:checked .overview-icon,
+#dash .dash-item-container .show-apps:checked .overview-icon,
+#dash .dash-item-container .overview-tile:focus .overview-icon {
+  background-color: rgba(255, 23, 68, 0.20);
+  box-shadow: inset 0 0 0 1px rgba(255, 23, 68, 0.42);
+}
+
+#dash .dash-separator {
+  background-color: rgba(232, 234, 240, 0.10);
+}
+
+.dash-label {
+  background-color: {{colors.dark-graphite}};
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 5px;
+  color: {{colors.soft-white}};
+  padding: 4px 10px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+}
+
+#dashtodockContainer #dash .dash-background {
+  background-color: rgba(10, 12, 17, 0.88);
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 16px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.62);
+}
+
+#dashtodockContainer.bottom #dash .dash-background {
+  border-bottom: 1px solid rgba(255, 23, 68, 0.55);
+}
+
+#dashtodockContainer .dash-item-container .overview-icon {
+  border-radius: 8px;
+}
+
+#dashtodockContainer .dash-item-container .app-well-app.focused .overview-icon,
+#dashtodockContainer .dash-item-container .overview-tile.focused .overview-icon {
+  background-color: rgba(255, 23, 68, 0.20);
+  box-shadow: inset 0 0 0 1px rgba(255, 23, 68, 0.42);
+}
+
+#dashtodockContainer .dash-item-container .app-grid-running-dot,
+#dashtodockContainer .dash-item-container .app-well-app-running-dot {
+  background-color: {{colors.neon-red}};
+  box-shadow: 0 0 8px rgba(255, 23, 68, 0.65);
+}
+
+.dashtodock-app-well-preview-menu-item {
+  border-radius: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   WORKSPACES / SWITCHER / OVERVIEW — NIGHT CITY redesign
+   Target: GNOME Shell 50 Workspace Switcher, Overview, Window Previews
+   -------------------------------------------------------------------------- */
+
+/* Overview background — cinematic dark */
+#overviewGroup {
+  background-color: rgba(8, 9, 13, 0.65);
+}
+
+/* Workspace thumbnails (vertical strip on right in overview) */
+.workspace-thumbnails {
+  spacing: 8px;
+  padding: 12px 8px;
+}
+
+.workspace-thumbnails .workspace-thumbnail {
+  background-color: {{colors.dark-graphite}};
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.workspace-thumbnails .workspace-thumbnail:hover {
+  border-color: rgba(255, 23, 68, 0.6);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 23, 68, 0.2);
+  transform: scale(1.02);
+}
+
+.workspace-thumbnails .workspace-thumbnail:focus {
+  border-color: {{colors.neon-red}};
+  box-shadow: 0 0 0 2px rgba(255, 23, 68, 0.4), 0 12px 32px rgba(0, 0, 0, 0.55);
+}
+
+/* Active workspace indicator — red border + glow */
+.workspace-thumbnail-indicator {
+  border: 2px solid {{colors.neon-red}};
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 23, 68, 0.5), inset 0 0 20px rgba(255, 23, 68, 0.1);
+  background-color: rgba(255, 23, 68, 0.05);
+}
+
+/* Workspace animation background */
+.workspace-animation {
+  background-color: {{colors.night-black}};
+}
+
+/* Window switcher (Alt+Tab) */
+.switcher-list {
+  background-color: rgba(8, 9, 13, 0.96);
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 16px;
+  box-shadow: 0 24px 72px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 23, 68, 0.05);
+  padding: 16px;
+}
+
+.switcher-list .item-box {
+  border-radius: 10px;
+  padding: 8px;
+  transition: background-color 120ms ease;
+}
+
+.switcher-list .item-box:hover,
+.switcher-list .item-box:selected {
+  background-color: rgba(255, 23, 68, 0.14);
+}
+
+.switcher-list .item-box:focus {
+  background-color: rgba(255, 23, 68, 0.18);
+  box-shadow: inset 0 0 0 2px rgba(255, 23, 68, 0.4);
+}
+
+.switcher-list .thumbnail {
+  border-radius: 8px;
+  border: 1px solid {{colors.border-gray}};
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.switcher-list .thumbnail:focus {
+  border-color: {{colors.neon-red}};
+  box-shadow: 0 0 0 2px rgba(255, 23, 68, 0.4), 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Switcher app icon and label */
+.switcher-list .item-box .app-icon {
+  border-radius: 8px;
+}
+
+.switcher-list .item-box .label {
+  font-family: "Space Grotesk", "Cantarell", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: {{colors.soft-white}};
+}
+
+/* Workspace switcher popup (Ctrl+Alt+Up/Down) */
+.ws-switcher-popup {
+  background-color: rgba(8, 9, 13, 0.94);
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  padding: 16px 24px;
+}
+
+.ws-switcher-indicator {
+  background-color: {{colors.industrial-steel}};
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 8px;
+  min-width: 40px;
+  min-height: 40px;
+  margin: 0 6px;
+  transition: all 150ms ease;
+}
+
+.ws-switcher-indicator:active,
+.ws-switcher-indicator:focus {
+  background-color: {{colors.neon-red}};
+  border-color: {{colors.neon-red}};
+  box-shadow: 0 0 20px rgba(255, 23, 68, 0.6);
+}
+
+/* Workspace indicator in panel (when using workspace indicator extension) */
+#panel .workspace-indicator {
+  padding: 0 8px;
+}
+
+#panel .workspace-indicator .workspace-indicator-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: {{colors.muted-silver}};
+  letter-spacing: 1px;
+}
+
+#panel .workspace-indicator:hover .workspace-indicator-label {
+  color: {{colors.neon-red}};
+}
+
+/* Overview search — enhanced */
+.search-entry {
+  background-color: {{colors.deep-carbon}};
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 999px;
+  color: {{colors.soft-white}};
+  padding: 10px 18px;
+  font-family: "Space Grotesk", "Cantarell", sans-serif;
+  font-size: 15px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(52, 59, 73, 0.3);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.search-entry:focus,
+.search-entry:focus-within {
+  border-color: {{colors.neon-red}};
+  box-shadow: 0 0 0 1px rgba(255, 23, 68, 0.4), 0 0 30px rgba(255, 23, 68, 0.25), inset 0 0 0 1px rgba(255, 23, 68, 0.2);
+  background-color: {{colors.night-black}};
+}
+
+.search-entry .search-entry-icon {
+  color: {{colors.neon-red}};
+  icon-size: 20px;
+}
+
+.search-section-content {
+  background-color: rgba(16, 18, 24, 0.95);
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  margin-top: 12px;
+  padding: 8px;
+}
+
+.list-search-result,
+.search-provider-icon {
+  border-radius: 10px;
+  color: {{colors.soft-white}};
+  padding: 10px 14px;
+  transition: background-color 120ms ease;
+}
+
+.list-search-result:hover,
+.search-provider-icon:hover,
+.list-search-result:focus,
+.search-provider-icon:focus {
+  background-color: rgba(255, 23, 68, 0.12);
+  color: {{colors.soft-white}};
+}
+
+.list-search-result:selected,
+.search-provider-icon:selected {
+  background-color: rgba(255, 23, 68, 0.2);
+}
+
+.search-statustext,
+.search-provider-icon .list-search-provider-content .list-search-provider-details {
+  color: {{colors.muted-silver}};
+  font-family: "Space Grotesk", "Cantarell", sans-serif;
+  font-size: 12px;
+}
+
+/* App grid in overview */
+.overview-tile,
+.grid-search-result {
+  background-color: transparent;
+  border-radius: 14px;
+  color: {{colors.soft-white}};
+  transition: background-color 130ms ease, box-shadow 130ms ease;
+  padding: 8px;
+}
+
+.overview-tile:hover,
+.grid-search-result:hover {
+  background-color: rgba(255, 23, 68, 0.08);
+  box-shadow: 0 8px 24px rgba(255, 23, 68, 0.08);
+}
+
+.overview-tile:focus,
+.grid-search-result:focus {
+  background-color: rgba(255, 23, 68, 0.14);
+  box-shadow: inset 0 0 0 2px rgba(255, 23, 68, 0.5);
+}
+
+.overview-tile:active,
+.grid-search-result:active {
+  background-color: rgba(255, 23, 68, 0.18);
+}
+
+.overview-tile:selected,
+.overview-tile:checked,
+.grid-search-result:selected,
+.grid-search-result:checked {
+  background-color: rgba(255, 23, 68, 0.18);
+  box-shadow: inset 0 0 0 2px rgba(255, 23, 68, 0.4);
+}
+
+/* App icon in overview */
+.overview-tile .overview-icon,
+.grid-search-result .overview-icon {
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.overview-tile .overview-icon:hover,
+.grid-search-result .overview-icon:hover {
+  background-color: rgba(255, 23, 68, 0.1);
+}
+
+/* App label in overview */
+.overview-tile .label,
+.grid-search-result .label {
+  font-family: "Space Grotesk", "Cantarell", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: {{colors.soft-white}};
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* App folders in overview */
+.app-folder {
+  background-color: {{colors.dark-graphite}};
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  padding: 8px;
+}
+
+.app-folder:hover {
+  background-color: #1C212B;
+  border-color: rgba(255, 23, 68, 0.48);
+}
+
+.app-folder .overview-icon {
+  border-radius: 10px;
+}
+
+.app-folder-dialog {
+  background-color: rgba(16, 18, 24, 0.98);
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 24px;
+  box-shadow: 0 32px 96px rgba(0, 0, 0, 0.8);
+  padding: 24px;
+}
+
+.app-folder-dialog .folder-name-entry {
+  border-radius: 8px;
+  border: 1px solid {{colors.border-gray}};
+  background-color: {{colors.night-black}};
+  color: {{colors.soft-white}};
+  caret-color: {{colors.neon-red}};
+  padding: 10px 14px;
+  font-family: "Space Grotesk", "Cantarell", sans-serif;
+  font-size: 14px;
+}
+
+.app-folder-dialog .folder-name-entry:focus {
+  border-color: {{colors.neon-red}};
+  box-shadow: inset 0 0 0 1px rgba(255, 23, 68, 0.4), 0 0 20px rgba(255, 23, 68, 0.2);
+}
+
+.app-grid-running-dot {
+  background-color: {{colors.neon-red}};
+  box-shadow: 0 0 10px rgba(255, 23, 68, 0.7);
+  border-radius: 999px;
+  min-width: 8px;
+  min-height: 8px;
+  margin-left: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   DIALOGS / OSD / TOOLTIPS
+   -------------------------------------------------------------------------- */
+.modal-dialog {
+  background-color: {{alpha.surface-strong}};
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 14px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.70);
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button {
+  border-radius: 7px;
+}
+
+.osd-window {
+  background-color: rgba(8, 9, 13, 0.92);
+  border: 1px solid {{colors.border-gray}};
+  border-radius: 12px;
+  color: {{colors.soft-white}};
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.60);
+}
+
+.osd-window .level {
+  -barlevel-background-color: {{colors.industrial-steel}};
+  -barlevel-active-background-color: {{colors.neon-red}};
+  -barlevel-overdrive-color: {{colors.neon-pink}};
+}
+
+.osd-monitor-label,
+.osd-break-countdown-label {
+  background-color: {{colors.neon-red}};
+  color: {{colors.night-black}};
+  border-radius: 12px;
+}
+
+.tooltip,
+.dash-label {
+  background-color: {{colors.dark-graphite}};
+  border: 1px solid {{colors.border-gray}};
+  color: {{colors.soft-white}};
+  border-radius: 5px;
+}
+
+/* --------------------------------------------------------------------------
+   LOCK SCREEN / LOGIN (GDM uses the same stylesheet in GDM mode)
+   -------------------------------------------------------------------------- */
+#lockDialogGroup {
+  background-color: rgba(8, 9, 13, 0.30);
+}
+
+.unlock-dialog {
+  background-color: transparent;
+}
+
+.unlock-dialog-clock {
+  color: {{colors.soft-white}};
+  font-family: "Rajdhani", sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.unlock-dialog-clock .unlock-dialog-clock-time {
+  font-family: "Orbitron", "Rajdhani", sans-serif;
+  font-weight: 700;
+  color: {{colors.soft-white}};
+  text-shadow: 0 0 28px rgba(255, 23, 68, 0.30);
+}
+
+.unlock-dialog-clock .unlock-dialog-clock-date,
+.unlock-dialog-clock .unlock-dialog-clock-hint {
+  color: {{colors.muted-silver}};
+}
+
+.unlock-dialog .login-dialog-prompt-entry,
+.login-dialog .login-dialog-prompt-entry {
+  background-color: rgba(8, 9, 13, 0.88) !important;
+  border: 1px solid rgba(255, 23, 68, 0.55) !important;
+  border-radius: 8px !important;
+  color: {{colors.soft-white}} !important;
+  box-shadow: 0 0 20px rgba(255, 23, 68, 0.18) !important;
+  caret-color: {{colors.neon-red}};
+}
+
+.unlock-dialog .login-dialog-prompt-entry:focus,
+.login-dialog .login-dialog-prompt-entry:focus {
+  border-color: {{colors.neon-red}} !important;
+  box-shadow: 0 0 0 1px rgba(255, 23, 68, 0.35), 0 0 26px rgba(255, 23, 68, 0.28) !important;
+}
+
+.login-dialog .user-widget .user-icon,
+.unlock-dialog .user-widget .user-icon {
+  background-color: rgba(255, 23, 68, 0.10);
+  border: 1px solid {{colors.border-gray}};
+  color: {{colors.soft-white}};
+}
+
+.login-dialog .user-widget .user-widget-label,
+.unlock-dialog .user-widget .user-widget-label {
+  font-family: "Rajdhani", sans-serif;
+  letter-spacing: 0.05em;
+  color: {{colors.soft-white}};
+}
+
+.login-dialog-message,
+.login-dialog-message-hint {
+  color: {{colors.muted-silver}};
+}
+
+.login-dialog-not-listed-button,
+.login-dialog-button.a11y-button,
+.login-dialog-button.cancel-button,
+.login-dialog-button.switch-user-button,
+.login-dialog-button.login-dialog-session-list-button {
+  background-color: rgba(23, 27, 36, 0.90) !important;
+  border: 1px solid {{colors.border-gray}} !important;
+  color: {{colors.soft-white}} !important;
+  border-radius: 7px;
+}
+
+.login-dialog-not-listed-button:hover,
+.login-dialog-button.a11y-button:hover,
+.login-dialog-button.cancel-button:hover,
+.login-dialog-button.switch-user-button:hover,
+.login-dialog-button.login-dialog-session-list-button:hover {
+  background-color: rgba(255, 23, 68, 0.16) !important;
+  border-color: rgba(255, 23, 68, 0.50) !important;
+}
+
+/* GDM panel is deliberately minimal */
+#panel.login-screen {
+  background-color: transparent;
+  border-bottom-color: transparent;
+  box-shadow: none;
+}
+
+/* --------------------------------------------------------------------------
+   ACCESSIBILITY
+   -------------------------------------------------------------------------- */
+.hidden {
+  color: transparent;
+}
+
+.caps-lock-warning-label {
+  color: {{colors.warning}};
+}
+
+:focus {
+  outline-color: rgba(255, 23, 68, 0.80);
+}
+
+/* Never let a translucent surface become unreadable in high-contrast mode */
+@media (prefers-contrast: more) {
+  #panel {
+    background-color: {{colors.night-black}};
+  }
+  .quick-settings,
+  .quick-toggle-menu,
+  .message,
+  .events-button,
+  .world-clocks-button,
+  .weather-button,
+  .modal-dialog {
+    background-color: {{colors.night-black}};
+    border-color: {{colors.soft-white}};
+  }
+}

@@ -1,0 +1,987 @@
+/* ==========================================================================
+   NIGHT CITY — GTK4 standalone surface treatment
+   Applied only when the user explicitly selects NightCity-GTK for a GTK4 app.
+   libadwaita applications ignore this file and use gtk-4.0-user.css instead.
+   Token placeholders are expanded by scripts/build-theme.py.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   NAMED COLOURS
+   -------------------------------------------------------------------------- */
+@define-color theme_fg_color {{colors.soft-white}};
+@define-color theme_text_color {{colors.soft-white}};
+@define-color theme_bg_color {{colors.deep-carbon}};
+@define-color theme_base_color {{colors.night-black}};
+@define-color theme_selected_bg_color {{colors.neon-red}};
+@define-color theme_selected_fg_color {{colors.night-black}};
+@define-color insensitive_bg_color {{colors.dark-graphite}};
+@define-color insensitive_fg_color {{colors.muted-silver}};
+@define-color insensitive_base_color {{colors.deep-carbon}};
+@define-color theme_unfocused_fg_color {{colors.muted-silver}};
+@define-color theme_unfocused_text_color {{colors.soft-white}};
+@define-color theme_unfocused_bg_color {{colors.deep-carbon}};
+@define-color theme_unfocused_base_color {{colors.night-black}};
+@define-color theme_unfocused_selected_bg_color {{colors.blood-red}};
+@define-color theme_unfocused_selected_fg_color {{colors.soft-white}};
+@define-color unfocused_insensitive_color #5B6270;
+@define-color borders {{colors.border-gray}};
+@define-color unfocused_borders #2A303C;
+@define-color warning_color {{colors.warning}};
+@define-color error_color {{colors.cyber-red}};
+@define-color success_color {{colors.success}};
+@define-color content_view_bg {{colors.night-black}};
+@define-color text_view_bg {{colors.night-black}};
+
+@define-color wm_title {{colors.soft-white}};
+@define-color wm_unfocused_title {{colors.muted-silver}};
+@define-color wm_highlight rgba(255, 255, 255, 0.04);
+@define-color wm_borders_edge rgba(232, 234, 240, 0.06);
+@define-color wm_bg_a {{colors.dark-graphite}};
+@define-color wm_bg_b {{colors.deep-carbon}};
+@define-color wm_shadow alpha(black, 0.55);
+@define-color wm_border alpha(black, 0.65);
+@define-color wm_button_hover_color_a {{colors.industrial-steel}};
+@define-color wm_button_hover_color_b {{colors.industrial-steel}};
+@define-color wm_button_active_color_a {{colors.blood-red}};
+@define-color wm_button_active_color_b {{colors.blood-red}};
+@define-color wm_button_active_color_c {{colors.blood-red}};
+
+@define-color nc_accent {{colors.neon-red}};
+@define-color nc_accent_fg {{colors.night-black}};
+@define-color nc_cyan {{colors.holo-cyan}};
+@define-color nc_purple {{colors.electric-purple}};
+@define-color nc_surface {{colors.dark-graphite}};
+@define-color nc_surface_raised {{colors.industrial-steel}};
+@define-color nc_border {{colors.border-gray}};
+
+/* --------------------------------------------------------------------------
+   WINDOWS / HEADERBARS
+   -------------------------------------------------------------------------- */
+window,
+.background {
+  background-color: {{colors.deep-carbon}};
+  color: {{colors.soft-white}};
+}
+
+window.csd {
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  border-radius: {{geometry.radius-window}};
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.55);
+}
+
+window.csd:backdrop {
+  border-color: #262C36;
+}
+
+window.maximized,
+window.fullscreen,
+window.tiled,
+window.tiled-top,
+window.tiled-left,
+window.tiled-right,
+window.tiled-bottom {
+  border-radius: 0;
+  border-color: transparent;
+}
+
+headerbar,
+.titlebar {
+  min-height: 40px;
+  padding: 0 8px;
+  background-image: linear-gradient(to bottom, {{colors.dark-graphite}}, {{colors.deep-carbon}});
+  background-color: {{colors.deep-carbon}};
+  border-bottom: {{geometry.border-width}} solid #0A0B10;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(255, 23, 68, 0.10);
+  color: {{colors.soft-white}};
+}
+
+headerbar:backdrop,
+.titlebar:backdrop {
+  background-image: none;
+  background-color: {{colors.deep-carbon}};
+  color: {{colors.muted-silver}};
+  box-shadow: none;
+}
+
+headerbar .title,
+.titlebar .title {
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 1.05em;
+  letter-spacing: 0.045em;
+  color: {{colors.soft-white}};
+}
+
+headerbar .subtitle,
+.titlebar .subtitle {
+  font-size: 0.85em;
+  color: {{colors.muted-silver}};
+}
+
+headerbar entry,
+headerbar spinbutton,
+headerbar button,
+headerbar separator {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+headerbar windowcontrols button {
+  min-width: 26px;
+  min-height: 26px;
+  padding: 0;
+  margin: 0 2px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  color: {{colors.muted-silver}};
+  transition: background-color 120ms ease, color 120ms ease;
+}
+
+headerbar windowcontrols button:hover {
+  background-color: rgba(255, 23, 68, 0.16);
+  border-color: rgba(255, 23, 68, 0.38);
+  color: {{colors.soft-white}};
+}
+
+headerbar windowcontrols button.close:hover {
+  background-color: {{colors.neon-red}};
+  border-color: {{colors.neon-red}};
+  color: {{colors.night-black}};
+}
+
+headerbar windowcontrols button:active {
+  background-color: rgba(255, 23, 68, 0.30);
+  color: {{colors.night-black}};
+}
+
+/* --------------------------------------------------------------------------
+   BUTTONS
+   -------------------------------------------------------------------------- */
+button {
+  min-height: 24px;
+  min-width: 16px;
+  padding: 5px 14px;
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  border-radius: {{geometry.radius-control}};
+  background-image: linear-gradient(to bottom, #222833, #1A1F28);
+  background-color: {{colors.industrial-steel}};
+  color: {{colors.soft-white}};
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
+  text-shadow: none;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+
+button:hover {
+  background-image: linear-gradient(to bottom, #2A313D, #222833);
+  background-color: #2A313D;
+  border-color: #454D5D;
+  color: {{colors.soft-white}};
+}
+
+button:active,
+button:checked {
+  background-image: image({{colors.night-black}});
+  background-color: {{colors.night-black}};
+  border-color: rgba(255, 23, 68, 0.55);
+  box-shadow: inset 0 0 0 1px rgba(255, 23, 68, 0.22);
+  color: {{colors.soft-white}};
+}
+
+button:focus:focus-visible {
+  border-color: {{colors.neon-red}};
+  box-shadow: inset 0 0 0 1px rgba(255, 23, 68, 0.45);
+  outline: none;
+}
+
+button:disabled {
+  background-image: image(#1A1F28);
+  background-color: #1A1F28;
+  border-color: #2A303C;
+  color: #5B6270;
+  box-shadow: none;
+}
+
+button.flat,
+button.image-button.flat,
+button.titlebutton {
+  border-color: transparent;
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+button.flat:hover,
+button.image-button.flat:hover {
+  background-color: rgba(232, 234, 240, 0.08);
+  border-color: {{colors.border-gray}};
+}
+
+button.flat:active,
+button.flat:checked {
+  background-color: rgba(255, 23, 68, 0.18);
+  border-color: rgba(255, 23, 68, 0.42);
+  box-shadow: none;
+}
+
+button.suggested-action {
+  background-image: linear-gradient(to bottom, {{colors.neon-red}}, {{colors.cyber-red}});
+  background-color: {{colors.cyber-red}};
+  border-color: {{colors.cyber-red}};
+  color: {{colors.night-black}};
+  font-weight: 700;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.22), 0 0 16px rgba(255, 23, 68, 0.22);
+}
+
+button.suggested-action:hover {
+  background-image: linear-gradient(to bottom, #FF2E58, {{colors.neon-red}});
+  border-color: {{colors.neon-red}};
+  color: {{colors.night-black}};
+}
+
+button.suggested-action:active,
+button.suggested-action:checked {
+  background-image: image({{colors.cyber-red}});
+  background-color: {{colors.cyber-red}};
+  border-color: {{colors.blood-red}};
+  box-shadow: none;
+}
+
+button.destructive-action {
+  background-image: linear-gradient(to bottom, {{colors.blood-red}}, #6E0C22);
+  background-color: {{colors.blood-red}};
+  border-color: #6E0C22;
+  color: {{colors.soft-white}};
+  font-weight: 700;
+}
+
+button.destructive-action:hover {
+  background-image: linear-gradient(to bottom, #A31634, {{colors.blood-red}});
+}
+
+button.suggested-action.flat,
+button.destructive-action.flat {
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+button.suggested-action.flat {
+  color: {{colors.neon-red}};
+  border-color: transparent;
+}
+
+button.destructive-action.flat {
+  color: {{colors.neon-pink}};
+  border-color: transparent;
+}
+
+button.circular,
+button.circular-button {
+  border-radius: {{geometry.radius-pill}};
+  padding: 5px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+/* Split buttons and linked groups */
+.linked > button,
+.linked > entry,
+.linked > spinbutton {
+  border-radius: 0;
+  border-right-width: 0;
+}
+
+.linked > :first-child {
+  border-radius: {{geometry.radius-control}} 0 0 {{geometry.radius-control}};
+}
+
+.linked > :last-child {
+  border-radius: 0 {{geometry.radius-control}} {{geometry.radius-control}} 0;
+  border-right-width: {{geometry.border-width}};
+}
+
+.linked > :only-child {
+  border-radius: {{geometry.radius-control}};
+  border-right-width: {{geometry.border-width}};
+}
+
+/* --------------------------------------------------------------------------
+   ENTRIES / SPIN BUTTONS / SEARCH
+   -------------------------------------------------------------------------- */
+entry,
+spinbutton,
+spinbutton:not(.vertical) {
+  min-height: 26px;
+  padding: 4px 10px;
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  border-radius: {{geometry.radius-control}};
+  background-color: {{colors.night-black}};
+  background-image: none;
+  color: {{colors.soft-white}};
+  caret-color: {{colors.neon-red}};
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.40);
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+entry:hover,
+spinbutton:hover {
+  border-color: #454D5D;
+}
+
+entry:focus,
+entry:focus-within,
+spinbutton:focus,
+spinbutton:focus-within {
+  border-color: {{colors.neon-red}};
+  box-shadow: inset 0 0 0 1px rgba(255, 23, 68, 0.30), 0 0 14px rgba(255, 23, 68, 0.16);
+}
+
+entry:disabled,
+spinbutton:disabled {
+  background-color: {{colors.deep-carbon}};
+  border-color: #2A303C;
+  color: #5B6270;
+  box-shadow: none;
+}
+
+entry selection,
+textview text selection,
+label selection {
+  background-color: {{colors.selection}};
+  color: {{colors.soft-white}};
+}
+
+entry.error,
+entry.error:focus {
+  border-color: {{colors.neon-red}};
+  color: {{colors.neon-pink}};
+}
+
+entry.warning,
+entry.warning:focus {
+  border-color: {{colors.warning}};
+  color: {{colors.warning}};
+}
+
+entry:drop(active) {
+  border-color: {{colors.holo-cyan}};
+  box-shadow: inset 0 0 0 1px {{colors.holo-cyan}};
+}
+
+entry > text > placeholder {
+  color: {{colors.muted-silver}};
+  opacity: 1;
+}
+
+spinbutton > button {
+  border-radius: 0;
+  border-width: 0;
+  border-left-width: {{geometry.border-width}};
+  border-color: {{colors.border-gray}};
+  background-image: none;
+  background-color: {{colors.dark-graphite}};
+  box-shadow: none;
+}
+
+spinbutton > button:hover {
+  background-color: {{colors.industrial-steel}};
+}
+
+searchbar,
+.search-bar {
+  background-color: {{colors.deep-carbon}};
+  border-bottom: {{geometry.border-width}} solid {{colors.border-gray}};
+}
+
+/* --------------------------------------------------------------------------
+   SCROLLBARS
+   -------------------------------------------------------------------------- */
+scrollbar {
+  background-color: transparent;
+  border: none;
+  transition: all 160ms ease;
+}
+
+scrollbar trough {
+  background-color: transparent;
+  border: none;
+}
+
+scrollbar slider {
+  min-width: 6px;
+  min-height: 6px;
+  margin: 3px;
+  border: 3px solid transparent;
+  border-radius: {{geometry.radius-pill}};
+  background-clip: padding-box;
+  background-color: #4A5160;
+}
+
+scrollbar slider:hover {
+  background-color: #5F6879;
+}
+
+scrollbar slider:active {
+  background-color: {{colors.neon-red}};
+}
+
+scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
+  background-color: #3E4552;
+}
+
+/* --------------------------------------------------------------------------
+   LISTS / COLUMN VIEWS / SIDEBARS
+   -------------------------------------------------------------------------- */
+listview,
+columnview,
+gridview,
+list,
+listbox,
+.view {
+  background-color: {{colors.night-black}};
+  color: {{colors.soft-white}};
+  border-color: {{colors.border-gray}};
+}
+
+listview > row,
+columnview > row,
+gridview > child,
+list > row,
+listbox > row {
+  border-radius: {{geometry.radius-control}};
+  transition: background-color 100ms ease;
+}
+
+listview > row:hover,
+columnview > row:hover,
+gridview > child:hover,
+list > row:hover,
+listbox > row:hover {
+  background-color: rgba(232, 234, 240, 0.06);
+}
+
+listview > row:selected,
+columnview > row:selected,
+gridview > child:selected,
+list > row:selected,
+listbox > row:selected {
+  background-color: rgba(255, 23, 68, 0.20);
+  color: {{colors.soft-white}};
+  box-shadow: inset 2px 0 {{colors.neon-red}};
+}
+
+listview > row:selected:hover,
+columnview > row:selected:hover {
+  background-color: rgba(255, 23, 68, 0.28);
+}
+
+columnview > header > button {
+  background-image: image({{colors.dark-graphite}});
+  background-color: {{colors.dark-graphite}};
+  border-color: {{colors.border-gray}};
+  border-radius: 0;
+  color: {{colors.muted-silver}};
+  font-weight: 600;
+  box-shadow: none;
+}
+
+columnview > header > button:hover {
+  background-image: image({{colors.industrial-steel}});
+  color: {{colors.soft-white}};
+}
+
+.sidebar,
+.navigation-sidebar,
+.sidebar list,
+.sidebar listview {
+  background-color: {{colors.deep-carbon}};
+  border-right: {{geometry.border-width}} solid {{colors.border-gray}};
+  color: {{colors.soft-white}};
+}
+
+.sidebar row:selected,
+.navigation-sidebar row:selected {
+  background-color: rgba(255, 23, 68, 0.18);
+  color: {{colors.soft-white}};
+  box-shadow: inset 2px 0 {{colors.neon-red}};
+}
+
+.sidebar row:hover,
+.navigation-sidebar row:hover {
+  background-color: rgba(232, 234, 240, 0.06);
+}
+
+/* --------------------------------------------------------------------------
+   NOTEBOOKS / TABS / STACK SWITCHERS
+   -------------------------------------------------------------------------- */
+notebook > header {
+  background-color: {{colors.deep-carbon}};
+  border-color: {{colors.border-gray}};
+}
+
+notebook > header > tabs > tab {
+  min-height: 26px;
+  padding: 4px 14px;
+  border: {{geometry.border-width}} solid transparent;
+  border-bottom: none;
+  border-radius: {{geometry.radius-control}} {{geometry.radius-control}} 0 0;
+  background-color: transparent;
+  color: {{colors.muted-silver}};
+  font-weight: 600;
+}
+
+notebook > header > tabs > tab:hover {
+  background-color: rgba(232, 234, 240, 0.06);
+  color: {{colors.soft-white}};
+}
+
+notebook > header > tabs > tab:checked {
+  background-color: {{colors.night-black}};
+  border-color: {{colors.border-gray}};
+  color: {{colors.soft-white}};
+  box-shadow: inset 0 2px {{colors.neon-red}};
+}
+
+notebook > stack {
+  background-color: {{colors.night-black}};
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  border-top: none;
+}
+
+stackswitcher > button {
+  border-radius: 0;
+  border-right-width: 0;
+}
+
+stackswitcher > button:first-child {
+  border-radius: {{geometry.radius-control}} 0 0 {{geometry.radius-control}};
+}
+
+stackswitcher > button:last-child {
+  border-radius: 0 {{geometry.radius-control}} {{geometry.radius-control}} 0;
+  border-right-width: {{geometry.border-width}};
+}
+
+stackswitcher > button:checked {
+  background-image: image({{colors.blood-red}});
+  border-color: {{colors.neon-red}};
+  color: {{colors.soft-white}};
+}
+
+/* --------------------------------------------------------------------------
+   MENUS / POPOVERS / DROPDOWNS
+   -------------------------------------------------------------------------- */
+popover > contents,
+popover.background > contents,
+menu,
+.menu {
+  background-color: {{colors.dark-graphite}};
+  color: {{colors.soft-white}};
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  border-radius: {{geometry.radius-card}};
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.60);
+  padding: 4px;
+}
+
+popover > arrow {
+  background-color: {{colors.dark-graphite}};
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+}
+
+popover.menu modelbutton,
+popover modelbutton,
+menuitem {
+  min-height: 22px;
+  padding: 5px 12px;
+  border-radius: 5px;
+  color: {{colors.soft-white}};
+  transition: background-color 100ms ease;
+}
+
+popover.menu modelbutton:hover,
+popover modelbutton:hover,
+menuitem:hover {
+  background-color: rgba(255, 23, 68, 0.16);
+  color: {{colors.soft-white}};
+}
+
+popover.menu modelbutton:active,
+popover modelbutton:active,
+menuitem:active {
+  background-color: rgba(255, 23, 68, 0.26);
+}
+
+popover.menu modelbutton:disabled,
+popover modelbutton:disabled,
+menuitem:disabled {
+  color: #5B6270;
+}
+
+popover.menu separator,
+popover separator,
+menu separator,
+separator {
+  background-color: {{colors.border-gray}};
+  min-width: 1px;
+  min-height: 1px;
+}
+
+dropdown > button {
+  border-radius: {{geometry.radius-control}};
+}
+
+dropdown > button > box > label {
+  color: {{colors.soft-white}};
+}
+
+dropdown > popover.menu > contents {
+  padding: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   CHECK / RADIO / SWITCH / SCALE / PROGRESS
+   -------------------------------------------------------------------------- */
+checkbutton check,
+checkbutton radio {
+  min-width: 15px;
+  min-height: 15px;
+  margin: 0 4px;
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  background-color: {{colors.night-black}};
+  background-image: none;
+  color: {{colors.soft-white}};
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+checkbutton check {
+  border-radius: 4px;
+}
+
+checkbutton radio {
+  border-radius: {{geometry.radius-pill}};
+}
+
+checkbutton check:hover,
+checkbutton radio:hover {
+  border-color: {{colors.neon-red}};
+  background-color: {{colors.deep-carbon}};
+}
+
+checkbutton check:checked,
+checkbutton check:indeterminate,
+checkbutton radio:checked,
+checkbutton radio:indeterminate {
+  background-color: {{colors.neon-red}};
+  background-image: none;
+  border-color: {{colors.neon-red}};
+  color: {{colors.night-black}};
+}
+
+checkbutton check:checked:hover,
+checkbutton radio:checked:hover {
+  background-color: #FF2E58;
+  border-color: #FF2E58;
+}
+
+checkbutton check:disabled,
+checkbutton radio:disabled {
+  border-color: #2A303C;
+  background-color: {{colors.deep-carbon}};
+  color: #5B6270;
+}
+
+switch {
+  min-width: 42px;
+  min-height: 22px;
+  padding: 0;
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  border-radius: {{geometry.radius-pill}};
+  background-color: {{colors.industrial-steel}};
+  background-image: none;
+  color: transparent;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+switch:hover {
+  background-color: #2A313D;
+}
+
+switch:checked {
+  background-color: {{colors.neon-red}};
+  border-color: {{colors.neon-red}};
+}
+
+switch:disabled {
+  background-color: {{colors.deep-carbon}};
+  border-color: #2A303C;
+}
+
+switch > slider {
+  min-width: 18px;
+  min-height: 18px;
+  margin: 1px;
+  border-radius: {{geometry.radius-pill}};
+  background-color: {{colors.soft-white}};
+  background-image: none;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.50);
+}
+
+switch:checked > slider {
+  background-color: {{colors.night-black}};
+}
+
+switch:disabled > slider {
+  background-color: #5B6270;
+}
+
+scale {
+  min-height: 12px;
+  min-width: 12px;
+  padding: 6px;
+}
+
+scale > trough {
+  min-height: 4px;
+  min-width: 4px;
+  border: none;
+  border-radius: {{geometry.radius-pill}};
+  background-color: {{colors.industrial-steel}};
+}
+
+scale > trough > highlight {
+  border-radius: {{geometry.radius-pill}};
+  background-color: {{colors.neon-red}};
+}
+
+scale > trough > slider {
+  min-width: 16px;
+  min-height: 16px;
+  margin: -7px;
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  border-radius: {{geometry.radius-pill}};
+  background-image: linear-gradient(to bottom, #2A313D, {{colors.industrial-steel}});
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.50);
+}
+
+scale > trough > slider:hover {
+  border-color: {{colors.neon-red}};
+}
+
+scale:disabled > trough {
+  background-color: #1E242D;
+}
+
+scale:disabled > trough > highlight {
+  background-color: {{colors.blood-red}};
+}
+
+progressbar > trough {
+  min-height: 6px;
+  border: none;
+  border-radius: {{geometry.radius-pill}};
+  background-color: {{colors.industrial-steel}};
+}
+
+progressbar > trough > progress {
+  min-height: 6px;
+  border: none;
+  border-radius: {{geometry.radius-pill}};
+  background-color: {{colors.neon-red}};
+  box-shadow: 0 0 12px rgba(255, 23, 68, 0.40);
+}
+
+levelbar > trough {
+  background-color: {{colors.industrial-steel}};
+  border-radius: 3px;
+}
+
+levelbar block {
+  border: none;
+  border-radius: 2px;
+  background-color: {{colors.holo-cyan}};
+}
+
+levelbar block.low {
+  background-color: {{colors.warning}};
+}
+
+levelbar block.high,
+levelbar block.full {
+  background-color: {{colors.success}};
+}
+
+levelbar block.empty {
+  background-color: {{colors.industrial-steel}};
+}
+
+/* --------------------------------------------------------------------------
+   TOOLTIPS / INFOBARS / OSD / SPINNERS
+   -------------------------------------------------------------------------- */
+tooltip,
+.tooltip {
+  padding: 6px 10px;
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  border-radius: 6px;
+  background-color: {{colors.dark-graphite}};
+  background-image: none;
+  color: {{colors.soft-white}};
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+}
+
+tooltip.background {
+  background-color: {{colors.dark-graphite}};
+  background-clip: border-box;
+}
+
+infobar,
+infobar.info,
+infobar.question,
+infobar.warning,
+infobar.error {
+  border: none;
+  border-radius: {{geometry.radius-control}};
+  background-color: {{colors.industrial-steel}};
+  color: {{colors.soft-white}};
+}
+
+infobar.info {
+  box-shadow: inset 3px 0 {{colors.holo-cyan}};
+}
+
+infobar.question {
+  box-shadow: inset 3px 0 {{colors.electric-purple}};
+}
+
+infobar.warning {
+  box-shadow: inset 3px 0 {{colors.warning}};
+}
+
+infobar.error {
+  box-shadow: inset 3px 0 {{colors.neon-red}};
+}
+
+.osd,
+.osd.background {
+  background-color: rgba(8, 9, 13, 0.92);
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  border-radius: {{geometry.radius-card}};
+  color: {{colors.soft-white}};
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.60);
+}
+
+spinner {
+  color: {{colors.neon-red}};
+  opacity: 1;
+}
+
+spinner:disabled {
+  color: {{colors.muted-silver}};
+  opacity: 0.5;
+}
+
+/* --------------------------------------------------------------------------
+   MISC
+   -------------------------------------------------------------------------- */
+frame > border,
+.frame {
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  border-radius: {{geometry.radius-card}};
+}
+
+frame > label {
+  color: {{colors.muted-silver}};
+}
+
+.card {
+  background-color: {{colors.dark-graphite}};
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  border-radius: {{geometry.radius-card}};
+}
+
+calendar {
+  border: {{geometry.border-width}} solid {{colors.border-gray}};
+  border-radius: {{geometry.radius-card}};
+  background-color: {{colors.night-black}};
+}
+
+calendar > :selected {
+  background-color: {{colors.neon-red}};
+  color: {{colors.night-black}};
+  border-radius: {{geometry.radius-pill}};
+}
+
+calendar > header {
+  border-bottom: {{geometry.border-width}} solid {{colors.border-gray}};
+}
+
+paned > separator {
+  background-color: {{colors.border-gray}};
+  background-image: none;
+  min-width: 1px;
+  min-height: 1px;
+}
+
+paned > separator:hover,
+paned > separator:selected {
+  background-color: {{colors.neon-red}};
+}
+
+textview > text {
+  background-color: {{colors.night-black}};
+  color: {{colors.soft-white}};
+}
+
+.dim-label,
+label.dim-label,
+.subtitle {
+  color: {{colors.muted-silver}};
+  opacity: 1;
+}
+
+link,
+.link {
+  color: {{colors.holo-cyan}};
+}
+
+link:hover,
+.link:hover {
+  color: #66F0FF;
+}
+
+link:visited,
+.link:visited {
+  color: {{colors.electric-purple}};
+}
+
+.large-title {
+  font-family: "Orbitron", "Rajdhani", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.title-1, .title-2, .title-3, .title-4 {
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+*:focus-visible {
+  outline-color: rgba(255, 23, 68, 0.80);
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: -2px;
+}
+
+:drop(active) {
+  border-color: {{colors.holo-cyan}};
+  box-shadow: inset 0 0 0 1px {{colors.holo-cyan}};
+}
+
+.nc-accent-bar {
+  background-image: linear-gradient(to right, {{colors.neon-red}}, {{colors.electric-purple}}, {{colors.holo-cyan}});
+  min-height: 2px;
+}

@@ -1,0 +1,95 @@
+# NIGHT CITY — Alacritty profile
+# Usage: add `[general] import = ["~/.config/alacritty/nightcity.toml"]`
+# above your own settings, or run `alacritty --config-file nightcity.toml`.
+
+[window]
+opacity = 0.97
+padding = { x = 14, y = 12 }
+dynamic_title = true
+
+[window.dimensions]
+columns = 110
+lines = 30
+
+[font]
+size = 11.5
+
+[font.normal]
+family = "JetBrains Mono"
+style = "Regular"
+
+[font.bold]
+family = "JetBrains Mono"
+style = "Bold"
+
+[font.italic]
+family = "JetBrains Mono"
+style = "Italic"
+
+[font.offset]
+x = 0
+y = 1
+
+[colors.primary]
+background = "#08090D"
+foreground = "#E8EAF0"
+dim_foreground = "#9299A8"
+bright_foreground = "#FFFFFF"
+
+[colors.cursor]
+text = "#08090D"
+cursor = "#FF1744"
+
+[colors.vi_mode_cursor]
+text = "#08090D"
+cursor = "#00E5FF"
+
+[colors.search.matches]
+foreground = "#08090D"
+background = "#FF1744"
+
+[colors.search.focused_match]
+foreground = "#08090D"
+background = "#00E5FF"
+
+[colors.footer_bar]
+foreground = "#08090D"
+background = "#9299A8"
+
+[colors.selection]
+text = "#E8EAF0"
+background = "#57202F"
+
+[colors.normal]
+black = "#101218"
+red = "#FF1744"
+green = "#A6E3A1"
+yellow = "#F9E2AF"
+blue = "#89B4FA"
+magenta = "#CBA6F7"
+cyan = "#00E5FF"
+white = "#E8EAF0"
+
+[colors.bright]
+black = "#343B49"
+red = "#FF3D81"
+green = "#B9EFB4"
+yellow = "#FFE9B8"
+blue = "#A8C8FF"
+magenta = "#DCC2FF"
+cyan = "#66F0FF"
+white = "#FFFFFF"
+
+[bell]
+animation = "EaseOutExpo"
+duration = 120
+color = "#FF1744"
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+unfocused_hollow = true
+blink_interval = 600
+
+[scrolling]
+history = 10000
+multiplier = 3

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="300" viewBox="0 0 1560 300">
+  <title>NIGHT CITY</title>
+  <defs>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feColorMatrix in="b" type="matrix" values="1 0 0 0 0  0 0.09 0 0 0  0 0.27 0 0 0  0 0 0 0.8 0" result="r"/>
+      <feMerge><feMergeNode in="r"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#glow)">
+    <g transform="translate(40 90) scale(2.55) translate(-40 -90)"><path d="M4 56 V4 L36 56 V4" fill="none" stroke="#E8EAF0" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter" /><path d="M12 4 H28 M20 4 V56 M12 56 H28" fill="none" stroke="#E8EAF0" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter" /><path d="M36 12 H12 V48 H36 V30 H23" fill="none" stroke="#E8EAF0" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter" /><path d="M6 4 V56 M34 4 V56 M6 30 H34" fill="none" stroke="#E8EAF0" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter" /><path d="M4 4 H36 M20 4 V56" fill="none" stroke="#E8EAF0" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter" /></g>
+    <rect x="803.5" y="84" width="4" height="150" fill="#FF1744"/>
+    <g transform="translate(845.5 90) scale(2.55) translate(-845.5 -90)"><path d="M36 8 H12 V52 H36" fill="none" stroke="#FF1744" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter" /><path d="M12 4 H28 M20 4 V56 M12 56 H28" fill="none" stroke="#FF1744" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter" /><path d="M4 4 H36 M20 4 V56" fill="none" stroke="#FF1744" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter" /><path d="M4 4 L20 30 L36 4 M20 30 V56" fill="none" stroke="#FF1744" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter" /></g>
+  </g>
+  <rect x="40" y="252" width="1400" height="2" fill="#9299A8" opacity="0.35"/>
+  <text x="44" y="286" font-family="Rajdhani, sans-serif" font-size="20" letter-spacing="9" fill="#9299A8">BEYOND THE SYSTEM. INTO THE CITY.</text>
+</svg>

@@ -1,0 +1,538 @@
+/* NIGHT CITY — libadwaita user stylesheet.
+ * Installed to ~/.config/gtk-4.0/gtk.css (backed up by install.sh).
+ * libadwaita does not support third-party GTK themes; this layer overrides
+ * Adwaita's named colours and surface selectors instead. Remove this file to
+ * return to stock libadwaita.
+ */
+/* ==========================================================================
+   NIGHT CITY — libadwaita user stylesheet
+   Installed to ~/.config/gtk-4.0/gtk.css by scripts/install.sh.
+
+   libadwaita applications do not load third-party GTK themes. This layer
+   redefines the named colours and surface selectors that libadwaita itself
+   uses, which is the only supported way to tint them without patching the
+   library. Delete this file (or run uninstall.sh) to return to stock Adwaita.
+
+   Token placeholders are expanded by scripts/build-theme.py.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CORE PALETTE — values consumed by libadwaita and by most GTK4 apps
+   -------------------------------------------------------------------------- */
+@define-color accent_bg_color #FF1744;
+@define-color accent_fg_color #08090D;
+@define-color accent_color #FF5C7E;
+
+@define-color window_bg_color #101218;
+@define-color window_fg_color #E8EAF0;
+@define-color view_bg_color #08090D;
+@define-color view_fg_color #E8EAF0;
+
+@define-color headerbar_bg_color #171B24;
+@define-color headerbar_fg_color #E8EAF0;
+@define-color headerbar_border_color #343B49;
+@define-color headerbar_backdrop_color #101218;
+@define-color headerbar_shade_color rgba(0, 0, 0, 0.45);
+@define-color headerbar_darker_shade_color rgba(0, 0, 0, 0.75);
+
+@define-color sidebar_bg_color #101218;
+@define-color sidebar_fg_color #E8EAF0;
+@define-color sidebar_backdrop_color #0C0E13;
+@define-color sidebar_shade_color rgba(0, 0, 0, 0.40);
+@define-color sidebar_border_color #343B49;
+
+@define-color secondary_sidebar_bg_color #171B24;
+@define-color secondary_sidebar_fg_color #E8EAF0;
+@define-color secondary_sidebar_backdrop_color #13161D;
+@define-color secondary_sidebar_shade_color rgba(0, 0, 0, 0.40);
+@define-color secondary_sidebar_border_color #343B49;
+
+@define-color card_bg_color #171B24;
+@define-color card_fg_color #E8EAF0;
+@define-color card_shade_color rgba(0, 0, 0, 0.45);
+
+@define-color dialog_bg_color #171B24;
+@define-color dialog_fg_color #E8EAF0;
+
+@define-color popover_bg_color #171B24;
+@define-color popover_fg_color #E8EAF0;
+@define-color popover_shade_color rgba(0, 0, 0, 0.45);
+
+@define-color shade_color rgba(0, 0, 0, 0.36);
+@define-color scrollbar_outline_color rgba(0, 0, 0, 0.65);
+
+@define-color theme_bg_color #101218;
+@define-color theme_fg_color #E8EAF0;
+@define-color theme_base_color #08090D;
+@define-color theme_text_color #E8EAF0;
+@define-color theme_selected_bg_color #FF1744;
+@define-color theme_selected_fg_color #08090D;
+
+@define-color borders #343B49;
+@define-color unfocused_borders #2A303C;
+@define-color insensitive_bg_color #171B24;
+@define-color insensitive_fg_color #9299A8;
+@define-color insensitive_base_color #101218;
+
+@define-color destructive_bg_color #8C102B;
+@define-color destructive_fg_color #E8EAF0;
+@define-color destructive_color #FF8AA1;
+@define-color error_bg_color #8C102B;
+@define-color error_fg_color #E8EAF0;
+@define-color error_color #FF8AA1;
+@define-color success_bg_color #1E5B3A;
+@define-color success_fg_color #E8EAF0;
+@define-color success_color #A6E3A1;
+@define-color warning_bg_color #6B4A12;
+@define-color warning_fg_color #E8EAF0;
+@define-color warning_color #D99A2B;
+
+/* NightCity-local names for app authors */
+@define-color nc_accent #FF1744;
+@define-color nc_accent_fg #08090D;
+@define-color nc_cyan #00E5FF;
+@define-color nc_purple #9B5CFF;
+@define-color nc_surface #171B24;
+@define-color nc_surface_raised #252B35;
+@define-color nc_border #343B49;
+
+/* --------------------------------------------------------------------------
+   SURFACES
+   -------------------------------------------------------------------------- */
+window,
+.background {
+  background-color: #101218;
+  color: #E8EAF0;
+}
+
+headerbar {
+  background-color: #171B24;
+  background-image: linear-gradient(to bottom, #171B24, #101218);
+  color: #E8EAF0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.55);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(255, 23, 68, 0.10);
+}
+
+headerbar:backdrop {
+  background-image: none;
+  background-color: #101218;
+  color: #9299A8;
+  box-shadow: none;
+}
+
+headerbar .title {
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+}
+
+headerbar .subtitle {
+  color: #9299A8;
+}
+
+window.csd {
+  border: 1px solid #343B49;
+  border-radius: 10px;
+}
+
+window.maximized,
+window.fullscreen,
+window.tiled,
+window.tiled-top,
+window.tiled-left,
+window.tiled-right,
+window.tiled-bottom {
+  border-radius: 0;
+  border-color: transparent;
+}
+
+/* --------------------------------------------------------------------------
+   BUTTONS
+   -------------------------------------------------------------------------- */
+button {
+  border-radius: 7px;
+  border: 1px solid #343B49;
+  background-image: linear-gradient(to bottom, #222833, #1A1F28);
+  background-color: #252B35;
+  color: #E8EAF0;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+button:hover {
+  background-image: linear-gradient(to bottom, #2A313D, #222833);
+  border-color: #454D5D;
+}
+
+button:active,
+button:checked {
+  background-image: image(#08090D);
+  border-color: rgba(255, 23, 68, 0.55);
+  box-shadow: inset 0 0 0 1px rgba(255, 23, 68, 0.22);
+}
+
+button.flat,
+button.image-button.flat,
+headerbar windowcontrols button {
+  background: transparent;
+  background-image: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+button.flat:hover,
+button.image-button.flat:hover,
+headerbar windowcontrols button:hover {
+  background-color: rgba(255, 23, 68, 0.14);
+  border-color: rgba(255, 23, 68, 0.32);
+}
+
+headerbar windowcontrols button.close:hover {
+  background-color: #FF1744;
+  border-color: #FF1744;
+  color: #08090D;
+}
+
+button.suggested-action {
+  background-image: linear-gradient(to bottom, #FF1744, #E60035);
+  border-color: #E60035;
+  color: #08090D;
+  font-weight: 700;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.22), 0 0 16px rgba(255, 23, 68, 0.20);
+}
+
+button.suggested-action:hover {
+  background-image: linear-gradient(to bottom, #FF2E58, #FF1744);
+  border-color: #FF1744;
+}
+
+button.destructive-action {
+  background-image: linear-gradient(to bottom, #8C102B, #6E0C22);
+  border-color: #6E0C22;
+  color: #E8EAF0;
+  font-weight: 700;
+}
+
+button.pill {
+  border-radius: 999px;
+}
+
+button.circular,
+button.circular-button {
+  border-radius: 999px;
+}
+
+/* --------------------------------------------------------------------------
+   ENTRIES / SEARCH
+   -------------------------------------------------------------------------- */
+entry,
+spinbutton {
+  border-radius: 7px;
+  border: 1px solid #343B49;
+  background-color: #08090D;
+  background-image: none;
+  color: #E8EAF0;
+  caret-color: #FF1744;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.40);
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+entry:hover,
+spinbutton:hover {
+  border-color: #454D5D;
+}
+
+entry:focus,
+entry:focus-within,
+spinbutton:focus,
+spinbutton:focus-within {
+  border-color: #FF1744;
+  box-shadow: inset 0 0 0 1px rgba(255, 23, 68, 0.30), 0 0 14px rgba(255, 23, 68, 0.16);
+}
+
+entry > text > placeholder {
+  color: #9299A8;
+  opacity: 1;
+}
+
+entry selection,
+label selection,
+textview > text selection {
+  background-color: #57202F;
+  color: #E8EAF0;
+}
+
+entry.error,
+entry.error:focus {
+  border-color: #FF1744;
+  color: #FF3D81;
+}
+
+entry.warning,
+entry.warning:focus {
+  border-color: #D99A2B;
+  color: #D99A2B;
+}
+
+searchbar {
+  background-color: #101218;
+  border-bottom: 1px solid #343B49;
+}
+
+/* --------------------------------------------------------------------------
+   CARDS / LISTS / SIDEBARS / VIEWS
+   -------------------------------------------------------------------------- */
+.card {
+  background-color: #171B24;
+  border: 1px solid #343B49;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+}
+
+.card.activatable:hover,
+.card.activatable:focus {
+  background-color: #1C212B;
+  border-color: rgba(255, 23, 68, 0.45);
+}
+
+list,
+listbox,
+listview,
+columnview,
+gridview,
+.view {
+  background-color: #08090D;
+  color: #E8EAF0;
+}
+
+listview > row,
+columnview > row,
+gridview > child,
+list > row,
+listbox > row {
+  border-radius: 7px;
+}
+
+listview > row:selected,
+columnview > row:selected,
+gridview > child:selected,
+list > row:selected,
+listbox > row:selected {
+  background-color: rgba(255, 23, 68, 0.20);
+  color: #E8EAF0;
+  box-shadow: inset 2px 0 #FF1744;
+}
+
+listview > row:hover,
+columnview > row:hover,
+gridview > child:hover,
+list > row:hover,
+listbox > row:hover {
+  background-color: rgba(232, 234, 240, 0.06);
+}
+
+.navigation-sidebar,
+.sidebar {
+  background-color: #101218;
+  border-right: 1px solid #343B49;
+  color: #E8EAF0;
+}
+
+.navigation-sidebar > row:selected {
+  background-color: rgba(255, 23, 68, 0.18);
+  color: #E8EAF0;
+  box-shadow: inset 2px 0 #FF1744;
+}
+
+.navigation-sidebar > row:hover {
+  background-color: rgba(232, 234, 240, 0.06);
+}
+
+columnview > header > button {
+  background-color: #171B24;
+  background-image: none;
+  border-color: #343B49;
+  border-radius: 0;
+  color: #9299A8;
+  box-shadow: none;
+}
+
+/* --------------------------------------------------------------------------
+   POPOVERS / MENUS / DROPDOWNS
+   -------------------------------------------------------------------------- */
+popover > contents,
+popover.menu > contents {
+  background-color: #171B24;
+  color: #E8EAF0;
+  border: 1px solid #343B49;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.60);
+}
+
+popover > arrow {
+  background-color: #171B24;
+  border: 1px solid #343B49;
+}
+
+popover.menu modelbutton {
+  border-radius: 5px;
+  color: #E8EAF0;
+}
+
+popover.menu modelbutton:hover {
+  background-color: rgba(255, 23, 68, 0.16);
+}
+
+dropdown > popover.menu > contents {
+  padding: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   CONTROLS
+   -------------------------------------------------------------------------- */
+switch {
+  background-color: #252B35;
+  border: 1px solid #343B49;
+}
+
+switch:checked {
+  background-color: #FF1744;
+  border-color: #FF1744;
+}
+
+switch > slider {
+  background-color: #E8EAF0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.50);
+}
+
+switch:checked > slider {
+  background-color: #08090D;
+}
+
+checkbutton check,
+checkbutton radio {
+  border: 1px solid #343B49;
+  background-color: #08090D;
+  color: #E8EAF0;
+}
+
+checkbutton check {
+  border-radius: 4px;
+}
+
+checkbutton radio {
+  border-radius: 999px;
+}
+
+checkbutton check:checked,
+checkbutton check:indeterminate,
+checkbutton radio:checked,
+checkbutton radio:indeterminate {
+  background-color: #FF1744;
+  border-color: #FF1744;
+  color: #08090D;
+}
+
+scale > trough {
+  background-color: #252B35;
+}
+
+scale > trough > highlight {
+  background-color: #FF1744;
+}
+
+progressbar > trough {
+  background-color: #252B35;
+}
+
+progressbar > trough > progress {
+  background-color: #FF1744;
+  box-shadow: 0 0 12px rgba(255, 23, 68, 0.40);
+}
+
+levelbar block.low {
+  background-color: #D99A2B;
+}
+
+levelbar block.high,
+levelbar block.full {
+  background-color: #A6E3A1;
+}
+
+levelbar block.empty {
+  background-color: #252B35;
+}
+
+scrollbar slider {
+  background-color: #4A5160;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-clip: padding-box;
+}
+
+scrollbar slider:hover {
+  background-color: #5F6879;
+}
+
+scrollbar slider:active {
+  background-color: #FF1744;
+}
+
+/* --------------------------------------------------------------------------
+   FEEDBACK / TYPOGRAPHY / LINKS
+   -------------------------------------------------------------------------- */
+tooltip {
+  background-color: #171B24;
+  color: #E8EAF0;
+  border: 1px solid #343B49;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+}
+
+.dim-label,
+.subtitle {
+  color: #9299A8;
+  opacity: 1;
+}
+
+link,
+.link {
+  color: #00E5FF;
+}
+
+link:hover {
+  color: #66F0FF;
+}
+
+link:visited {
+  color: #9B5CFF;
+}
+
+.large-title {
+  font-family: "Orbitron", "Rajdhani", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.title-1, .title-2, .title-3, .title-4 {
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+*:focus-visible {
+  outline-color: rgba(255, 23, 68, 0.80);
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: -2px;
+}
+
+:drop(active) {
+  border-color: #00E5FF;
+  box-shadow: inset 0 0 0 1px #00E5FF;
+}
+
+.nc-accent-bar {
+  background-image: linear-gradient(to right, #FF1744, #9B5CFF, #00E5FF);
+  min-height: 2px;
+}

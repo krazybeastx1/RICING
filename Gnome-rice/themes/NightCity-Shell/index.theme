@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=NightCity-Shell
+Comment=NIGHT CITY — GNOME Shell theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=NightCity-GTK
+IconTheme=NightCity-Icons
+CursorTheme=NightCity-Cursor
